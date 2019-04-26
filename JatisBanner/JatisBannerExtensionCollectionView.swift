@@ -24,7 +24,6 @@ extension UICollectionView{
                 break
             @unknown default:
                 fatalError()
-                print("error")
             }
             tmr.fire()
         }

@@ -18,25 +18,27 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A library iOS project with Jatis Configuration
+A library iOS project with Jatis standard development guides.
                        DESC
 
-  s.homepage         = 'https://github.com/gunturprasojo/Jatis-iOS.git'
+  s.homepage         = 'https://github.com/gunturprasojo/Jatis-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Guntur Budi' => 'guntur.prasojo@jatis.com' }
   s.source           = { :git => 'https://github.com/gunturprasojo/Jatis-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Jatis-iOS/Classes/**/*'
+  s.source_files =  'JatisView/**/*', 'JatisBanner/**/*'
+  
+  #s.source_files  = 'Jatis-iOS/Classes/*.{h,m}'
   
   # s.resource_bundles = {
   #   'Jatis-iOS' => ['Jatis-iOS/Assets/*.png']
   # }
 
-   s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
