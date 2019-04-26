@@ -1,9 +1,5 @@
 # Jatis-iOS
 
-[![CI Status](https://img.shields.io/travis/Guntur Budi/Jatis-iOS.svg?style=flat)](https://travis-ci.org/Guntur Budi/Jatis-iOS)
-[![Version](https://img.shields.io/cocoapods/v/Jatis-iOS.svg?style=flat)](https://cocoapods.org/pods/Jatis-iOS)
-[![License](https://img.shields.io/cocoapods/l/Jatis-iOS.svg?style=flat)](https://cocoapods.org/pods/Jatis-iOS)
-[![Platform](https://img.shields.io/cocoapods/p/Jatis-iOS.svg?style=flat)](https://cocoapods.org/pods/Jatis-iOS)
 
 ## Example
 
