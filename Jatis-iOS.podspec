@@ -34,7 +34,7 @@ A library iOS project with Jatis standard development guides.
   
   s.source_files =  'JatisView/**/*', 'JatisBanner/**/*'
   
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   
   #s.source_files  = 'Jatis-iOS/Classes/*.{h,m}'
   
