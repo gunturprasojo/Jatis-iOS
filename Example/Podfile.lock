@@ -1,0 +1,16 @@
+PODS:
+  - Jatis-iOS (0.1.0)
+
+DEPENDENCIES:
+  - Jatis-iOS (from `../`)
+
+EXTERNAL SOURCES:
+  Jatis-iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Jatis-iOS: 726a2fea3566ded549cfc9ed1b6175788d190c74
+
+PODFILE CHECKSUM: 6fe90424dd11cb33d91ee6b988c3725abe02e583
+
+COCOAPODS: 1.6.0

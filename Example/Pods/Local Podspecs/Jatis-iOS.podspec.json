@@ -1,0 +1,22 @@
+{
+  "name": "Jatis-iOS",
+  "version": "0.1.0",
+  "summary": "A short description of Jatis-iOS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Guntur Budi/Jatis-iOS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Guntur Budi": "guntur.prasojo@jatis.com"
+  },
+  "source": {
+    "git": "https://github.com/Guntur Budi/Jatis-iOS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Jatis-iOS/Classes/**/*"
+}
