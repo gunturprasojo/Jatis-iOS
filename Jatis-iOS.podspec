@@ -26,6 +26,7 @@ A library iOS project with Jatis standard development guides.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Guntur Budi' => 'guntur.prasojo@jatis.com' }
   s.source           = { :git => 'https://github.com/gunturprasojo/Jatis-iOS.git', :tag => s.version.to_s }
+  
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   
