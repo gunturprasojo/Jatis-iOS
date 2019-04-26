@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Jatis-iOS'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'A library for iOS project with Jatis Configuration'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 A library iOS project with Jatis Configuration
                        DESC
 
-  s.homepage         = 'https://github.com/Guntur Budi/Jatis-iOS.git'
+  s.homepage         = 'https://github.com/gunturprasojo/Jatis-iOS.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Guntur Budi' => 'guntur.prasojo@jatis.com' }
-  s.source           = { :git => 'https://github.com/Guntur Budi/Jatis-iOS.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/gunturprasojo/Jatis-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -36,7 +36,7 @@ A library iOS project with Jatis Configuration
   #   'Jatis-iOS' => ['Jatis-iOS/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.public_header_files = 'Pod/Classes/**/*.h'
+   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
