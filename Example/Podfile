@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Jatis-iOS_Example' do
+  pod 'Jatis-iOS', :path => '../'
+
+  target 'Jatis-iOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
