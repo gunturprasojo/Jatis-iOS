@@ -28,9 +28,12 @@ A library iOS project with Jatis standard development guides.
   s.source           = { :git => 'https://github.com/gunturprasojo/Jatis-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
-
+  
+  s.platform = :ios, '12.0'
+  
   s.source_files =  'JatisView/**/*', 'JatisBanner/**/*'
+  
+  s.swift_version = '4.2'
   
   #s.source_files  = 'Jatis-iOS/Classes/*.{h,m}'
   
