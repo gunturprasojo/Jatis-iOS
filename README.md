@@ -6,36 +6,56 @@
 Overview
 ==========
 * [Advanced API](https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/ViewController.swift)
-==========
+
 
 GIF Demo
 ==========
 <p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/initialView.gif" />
+  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/initialView.gif" 
+       width="279" height="570"/>
 </p>
 
 
 How To Use
 ==========
 1. Import API :
-<p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/1.%20Import.png" />
-</p>
+```swift
+import Jatis_iOS
+```
 
 2. Init Banner : 
-<p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/2.%20AddJatisBanner.png" />
-</p>
+```swift
+firstBannerView.layoutIfNeeded()
+    let jatisBanner1 = JatisBanner(_id: _id, images: images, enablePaging: true,
+                                  imageContentMode: .scaleAspectFill,
+                                  isImageTapped : true,
+                                  scrollDirection: .horizontal,
+                                  size:self.firstBannerView.bounds.size,
+                                  cornerRadius: 20, aspectRatio: 9/16,
+                                  animate: true,animationInterval: 3)
+jatisBanner1.delegate = self
+self.firstBannerView.addSubview(jatisBanner1)
+```
 
 3. Call shadow function : 
-<p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/3.%20AddJatisShadow.png" />
-</p>
+```swift
+firstBannerView.addRoundShadow(fillColor: .white,
+                             cornerRadius: 50,
+                             shadowColor: .black,
+                             shadowOpacity: 0.8,
+                             shadowOffSet: CGSize(width: -5, height: 2),
+                             shadowRadius: 5,
+                             scale: 1)
+```
 
 4. Action Listener (If Image Clicked)
-<p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/4.%20Receiver.png" />
-</p>
+```swift
+extension ViewController : JatisBannerProtocol {
+    func didSelectBanner(_ data: String) {
+        print("\(data)")
+    }
+}
+```
 
 
 ## Example
