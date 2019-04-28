@@ -21,7 +21,7 @@ import UIKit
 //  Protocol to receive an action.
 //  This Protocol used to receive an action that if user press the image,
 //  then return a string that contains id of the image based on index of String (array types).
-protocol JatisBannerProtocol: class {
+public protocol JatisBannerProtocol: class {
     func didSelectBanner(_ data: String)
 }
 
@@ -61,7 +61,7 @@ open class JatisBanner:UIView{
     fileprivate var scrollDirection:UICollectionView.ScrollDirection
     
     // Declare a delegate to receiver an action of collectionView
-    weak var delegate: JatisBannerProtocol?
+    public weak var delegate: JatisBannerProtocol?
     
     required public init(_id:[String], images : [UIImage], enablePaging : Bool,
                          imageContentMode : ContentMode, isImageTapped : Bool, scrollDirection: UICollectionView.ScrollDirection,
@@ -81,7 +81,7 @@ open class JatisBanner:UIView{
         
         self.animate = animate
         self.animationInterval = animationInterval
-        
+    
         super.init(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height));
         self.layer.masksToBounds = true
         self.layer.cornerRadius = self.cornerRadius
@@ -100,7 +100,7 @@ open class JatisBanner:UIView{
 
 extension JatisBanner{
     
-    func formatCollectionBannerView(){
+    private func formatCollectionBannerView(){
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize =  CGSize(width: self.bounds.size.width, height:self.bounds.size.width*(aspectRatio))
         flowLayout.scrollDirection = scrollDirection
@@ -140,8 +140,8 @@ extension JatisBanner: UICollectionViewDelegate, UICollectionViewDataSource{
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jatisBannerCellIdentifier", for: indexPath)
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height:  self.bounds.size.width*(aspectRatio))
-        imageView.image = images[indexPath.section]
+            imageView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height:  self.bounds.size.width*(self.aspectRatio))
+            imageView.image = self.images[indexPath.section]
         imageView.contentMode = self.imageContentMode
         cell.addSubview(imageView)
         return cell

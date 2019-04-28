@@ -1,5 +1,6 @@
 import XCTest
-import Jatis-iOS
+//import Jatis-iOS
+import Jatis_iOS
 
 class Tests: XCTestCase {
     
