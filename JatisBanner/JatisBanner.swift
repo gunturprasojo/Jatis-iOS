@@ -1,32 +1,72 @@
+//
+//  JatisShadow.swift
+//  Jatis-iOS
+//
+//  Created by Guntur Budi on 26/04/19.
+//
+
+
+/*
+ The code below is used to create a banner type display.
+ The functions below include:
+ 1.  Make UIView type class with image display to display the desired banner.
+ 2.  Create a collectionview type display to display the image you want to display in the JatisBanner class.
+ 3.  Protocol to get the value of the id from the banner that has been clicked.
+ */
+
 
 import UIKit
 
 
+//  Protocol to receive an action.
+//  This Protocol used to receive an action that if user press the image,
+//  then return a string that contains id of the image based on index of String (array types).
 protocol JatisBannerProtocol: class {
     func didSelectBanner(_ data: String)
 }
 
 
-class JatisBanner: UIView {
+//  Declaration of class JatisBanner
+open class JatisBanner:UIView{
     
-    var images: [UIImage]
-    var _id: [String]
-    var cornerRadius: CGFloat
-    var aspectRatio:CGFloat
-    var imageContentMode:ContentMode
-    var isImageTapped:Bool
-    var animate:Bool
-    var animationInterval:Double
-    var enablePaging:Bool
-    var scrollDirection:UICollectionView.ScrollDirection
+    //  Create an array type of UIImages -> Image that want to show.
+    fileprivate var images: [UIImage]
     
+    //  Create an array of String -> Id of an image.
+    fileprivate var _id: [String]
     
+    //  Create a float type variable to set corner radius,
+    //  that used to set the radius of the corner of a view.
+    fileprivate var cornerRadius: CGFloat
+    
+    //  Create a float type variable to set aspect ratio of Image that wanted to show.
+    fileprivate var aspectRatio:CGFloat
+    
+    //  Create a content mode type variable to set the image content fill type
+    fileprivate var imageContentMode:ContentMode
+    
+    //  Create a bool type that if want to give an action (click/press) to an image that shown
+    fileprivate var isImageTapped:Bool
+    
+    //  Create a bool type that set to animate the Banner
+    fileprivate var animate:Bool
+    
+    //  Set an interval (seconds) of animation each image duration want to be shown
+    fileprivate var animationInterval:Double
+    
+    //  Set a paging configuration for displaying the images
+    fileprivate var enablePaging:Bool
+    
+    //  Set a scroll Direction between horizontal (left to right by default) or vertical (up to bottom . by default)
+    fileprivate var scrollDirection:UICollectionView.ScrollDirection
+    
+    // Declare a delegate to receiver an action of collectionView
     weak var delegate: JatisBannerProtocol?
     
-    init(_id:[String], images : [UIImage], enablePaging : Bool,
-         imageContentMode : ContentMode, isImageTapped : Bool, scrollDirection: UICollectionView.ScrollDirection,
-         size:CGSize, cornerRadius: CGFloat, aspectRatio: CGFloat,
-         animate: Bool,animationInterval:Double)
+    required public init(_id:[String], images : [UIImage], enablePaging : Bool,
+                         imageContentMode : ContentMode, isImageTapped : Bool, scrollDirection: UICollectionView.ScrollDirection,
+                         size:CGSize, cornerRadius: CGFloat, aspectRatio: CGFloat,
+                         animate: Bool,animationInterval:Double)
     {
         self._id = _id
         self.images = images
@@ -50,7 +90,8 @@ class JatisBanner: UIView {
         return
     }
     
-    required init?(coder aDecoder: NSCoder){
+    
+    required public init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -60,7 +101,6 @@ class JatisBanner: UIView {
 extension JatisBanner{
     
     func formatCollectionBannerView(){
-        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize =  CGSize(width: self.bounds.size.width, height:self.bounds.size.width*(aspectRatio))
         flowLayout.scrollDirection = scrollDirection
@@ -68,13 +108,11 @@ extension JatisBanner{
         collectionView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.width*(aspectRatio))
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellIdentifier")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "jatisBannerCellIdentifier")
         collectionView.reloadData()
         collectionView.isPagingEnabled = enablePaging
         collectionView.isScrollEnabled = true
         collectionView.layer.masksToBounds = true
-        
-        
         if (animate){
             collectionView.animateCollectionView(coll:collectionView, isAnimate: animate,
                                                  animationInterval: animationInterval,
@@ -91,16 +129,16 @@ extension JatisBanner{
 
 extension JatisBanner: UICollectionViewDelegate, UICollectionViewDataSource{
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdentifier", for: indexPath)
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jatisBannerCellIdentifier", for: indexPath)
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height:  self.bounds.size.width*(aspectRatio))
         imageView.image = images[indexPath.section]
@@ -109,7 +147,7 @@ extension JatisBanner: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (isImageTapped){
             delegate?.didSelectBanner(_id[indexPath.section])
         }
