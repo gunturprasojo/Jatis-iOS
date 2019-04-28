@@ -15,10 +15,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B8417CDE2275D24B0024736C /* initialView.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8417CDD2275D24B0024736C /* initialView.gif */; };
-		B8417CE32275D6DE0024736C /* 2. AddJatisBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = B8417CDF2275D6DE0024736C /* 2. AddJatisBanner.png */; };
-		B8417CE42275D6DE0024736C /* 1. Import.png in Resources */ = {isa = PBXBuildFile; fileRef = B8417CE02275D6DE0024736C /* 1. Import.png */; };
-		B8417CE52275D6DE0024736C /* 4. Receiver.png in Resources */ = {isa = PBXBuildFile; fileRef = B8417CE12275D6DE0024736C /* 4. Receiver.png */; };
-		B8417CE62275D6DE0024736C /* 3. AddJatisShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = B8417CE22275D6DE0024736C /* 3. AddJatisShadow.png */; };
 		C1D7282F7CA3013C9DFE951F /* Pods_Jatis_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FB58978D37F850AC28B028 /* Pods_Jatis_iOS_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +47,6 @@
 		9C39D74B69D281D1311752CB /* Pods-Jatis-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jatis-iOS_Example.release.xcconfig"; path = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B4FB58978D37F850AC28B028 /* Pods_Jatis_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jatis_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8417CDD2275D24B0024736C /* initialView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = initialView.gif; sourceTree = "<group>"; };
-		B8417CDF2275D6DE0024736C /* 2. AddJatisBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. AddJatisBanner.png"; sourceTree = "<group>"; };
-		B8417CE02275D6DE0024736C /* 1. Import.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. Import.png"; sourceTree = "<group>"; };
-		B8417CE12275D6DE0024736C /* 4. Receiver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4. Receiver.png"; sourceTree = "<group>"; };
-		B8417CE22275D6DE0024736C /* 3. AddJatisShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3. AddJatisShadow.png"; sourceTree = "<group>"; };
 		D1C0379114515DAEAE75A74A /* Pods-Jatis-iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jatis-iOS_Tests.release.xcconfig"; path = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E296467D1AECC0474C99FF08 /* Pods-Jatis-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jatis-iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,10 +165,6 @@
 		B8417CDC2275D2250024736C /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				B8417CE02275D6DE0024736C /* 1. Import.png */,
-				B8417CDF2275D6DE0024736C /* 2. AddJatisBanner.png */,
-				B8417CE22275D6DE0024736C /* 3. AddJatisShadow.png */,
-				B8417CE12275D6DE0024736C /* 4. Receiver.png */,
 				B8417CDD2275D24B0024736C /* initialView.gif */,
 			);
 			name = Asset;
@@ -270,14 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8417CE52275D6DE0024736C /* 4. Receiver.png in Resources */,
 				B8417CDE2275D24B0024736C /* initialView.gif in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				B8417CE62275D6DE0024736C /* 3. AddJatisShadow.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				B8417CE42275D6DE0024736C /* 1. Import.png in Resources */,
-				B8417CE32275D6DE0024736C /* 2. AddJatisBanner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
