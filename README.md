@@ -1,4 +1,4 @@
-### Jatis-iOS
+## Jatis-iOS
 <p align="center">
   <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/Images.xcassets/jatis.imageset/lgJatis%403x.png" />
 </p>
@@ -24,13 +24,12 @@ pod 'Jatis-iOS'
 * [Advanced API](https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/ViewController.swift)
 
 ## How To Use
-==========
 ### 1. Import API :
 ```swift
 import Jatis_iOS
 ```
 
-### 2. Init Banner : 
+### 2. Adding banner : 
 ```swift
 firstBannerView.layoutIfNeeded()
     let jatisBanner1 = JatisBanner(_id: _id, images: images, enablePaging: true,
@@ -44,7 +43,7 @@ jatisBanner1.delegate = self
 self.firstBannerView.addSubview(jatisBanner1)
 ```
 
-### 3. Call shadow function : 
+### 3. Adding shadow : 
 ```swift
 firstBannerView.addRoundShadow(fillColor: .white,
                              cornerRadius: 50,
