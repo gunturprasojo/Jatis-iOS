@@ -145,7 +145,7 @@ extension ViewController {
     
     func generateShadow(){
         
-        firstBannerView.addRoundShadow(fillColor: .red,
+        firstBannerView.addRoundShadow(fillColor: .white,
                                cornerRadius: 50,
                                shadowColor: .black,
                                shadowOpacity: 0.8,
