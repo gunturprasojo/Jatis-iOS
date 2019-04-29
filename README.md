@@ -19,6 +19,7 @@ pod 'Jatis-iOS'
 ## Feature
 * Banner
 * Shadow
+* Textfield
 
 ## Overview
 * [Advanced API](https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/ViewController.swift)
@@ -66,26 +67,26 @@ extension ViewController : JatisBannerProtocol {
 
 ### 5. Adding TextField
 ```swift
- @IBOutlet var textFieldView: UIView!
- @IBOutlet var labelView: UILabel!
+@IBOutlet var textFieldView: UIView!
+@IBOutlet var labelView: UILabel!
   
 override func viewDidLoad() {
-        super.viewDidLoad()
-        self.generateTextFieldView()
-    }
+    super.viewDidLoad()
+    self.generateTextFieldView()
+}
     
 
-    func generateTextFieldView(){
-        textFieldView.layoutIfNeeded()
-        let jatisTxtField = JatisTextField(tagTextfield: 1, textPlaceHolder: "placeholder",
-                                           size: textFieldView.bounds.size,
-                                           fontPlaceholder: UIFont(name: "Futura",size: 12)!,
-                                           fontTextField: UIFont(name: "Helvetica", size: 14)!,
-                                           textColor: .red, placeHolderBeforeColor: .lightGray,
-                                           placeHolderAfterColor: .darkText)
-        jatisTxtField.delegate = self
-        textFieldView.addSubview(jatisTxtField)
-    }
+func generateTextFieldView(){
+    textFieldView.layoutIfNeeded()
+    let jatisTxtField = JatisTextField(tagTextfield: 1, textPlaceHolder: "placeholder",
+                                       size: textFieldView.bounds.size,
+                                       fontPlaceholder: UIFont(name: "Futura",size: 12)!,
+                                       fontTextField: UIFont(name: "Helvetica", size: 14)!,
+                                       textColor: .red, placeHolderBeforeColor: .lightGray,
+                                       placeHolderAfterColor: .darkText)
+    jatisTxtField.delegate = self
+    textFieldView.addSubview(jatisTxtField)
+}
 ```
 
 
