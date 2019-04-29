@@ -85,7 +85,14 @@
                             <constraint firstItem="rKa-Qu-tGu" firstAttribute="trailing" secondItem="mlc-Vl-t1t" secondAttribute="trailing" id="xtS-qA-wEk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jatis iOS" id="Xpy-G0-uEI"/>
+                    <navigationItem key="navigationItem" title="Jatis iOS" id="Xpy-G0-uEI">
+                        <barButtonItem key="backBarButtonItem" title=" " id="y66-8D-3J9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="bvT-Lm-kf8">
+                            <connections>
+                                <segue destination="lMf-pK-7Hm" kind="show" id="0HO-7L-CFP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fifthBannerView" destination="1Kt-Y5-wiO" id="r9F-r1-Ld4"/>
                         <outlet property="firstBannerView" destination="mlc-Vl-t1t" id="wIo-Hn-GSR"/>
@@ -99,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PSF-0u-2sp">
             <objects>
-                <viewController id="lMf-pK-7Hm" sceneMemberID="viewController">
+                <viewController id="lMf-pK-7Hm" customClass="SecondViewController" customModule="Jatis_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GVp-WT-enL"/>
                         <viewControllerLayoutGuide type="bottom" id="qMG-Gn-e9H"/>
@@ -110,12 +117,38 @@
                     <view key="view" contentMode="scaleToFill" id="wLc-JB-BMm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fx-Pe-oze">
+                                <rect key="frame" x="75" y="111" width="225" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="fFH-z2-Dsv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1n2-fM-oJ8">
+                                <rect key="frame" x="166.5" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1fx-Pe-oze" firstAttribute="top" secondItem="GVp-WT-enL" secondAttribute="bottom" constant="47" id="8GI-BI-2oc"/>
+                            <constraint firstItem="1fx-Pe-oze" firstAttribute="centerX" secondItem="wLc-JB-BMm" secondAttribute="centerX" id="UmJ-ae-bVC"/>
+                            <constraint firstItem="1n2-fM-oJ8" firstAttribute="centerX" secondItem="1fx-Pe-oze" secondAttribute="centerX" id="cID-Ds-SNY"/>
+                            <constraint firstItem="1n2-fM-oJ8" firstAttribute="top" secondItem="1fx-Pe-oze" secondAttribute="bottom" constant="57" id="qID-TR-hSU"/>
+                            <constraint firstItem="1fx-Pe-oze" firstAttribute="width" secondItem="wLc-JB-BMm" secondAttribute="width" multiplier="0.6" id="yMv-XT-LbC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelView" destination="1n2-fM-oJ8" id="iDg-B8-21a"/>
+                        <outlet property="textFieldView" destination="1fx-Pe-oze" id="trL-CH-gtI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spf-s2-cL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="134"/>
+            <point key="canvasLocation" x="888.79999999999995" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zcv-OR-93C">

@@ -71,55 +71,61 @@ extension ViewController {
         
         //  1
         firstBannerView.layoutIfNeeded()
-        let jatisBanner1 = JatisBanner(_id: _id, images: images, enablePaging: true,
+        let jatisBanner1 = JatisBanner(_id: _id, tagBanner: 1,
+                                       images: images, enablePaging: true,
                                       imageContentMode: .scaleAspectFill,
                                       isImageTapped : true,
                                       scrollDirection: .horizontal,
                                       size:self.firstBannerView.bounds.size,
                                       cornerRadius: 20, aspectRatio: 9/16,
                                       animate: true,animationInterval: 3)
+        jatisBanner1.tag = 5
         jatisBanner1.delegate = self
         self.firstBannerView.addSubview(jatisBanner1)
         
         //  2
         secondBannerView.layoutIfNeeded()
-        let jatisBanner2 = JatisBanner(_id: _id, images: images, enablePaging: true,
-                                      imageContentMode: .scaleAspectFill,
-                                      isImageTapped : true,
-                                      scrollDirection: .vertical,
-                                      size:self.secondBannerView.bounds.size,
-                                      cornerRadius: 20, aspectRatio: 1/1,
-                                      animate: true,animationInterval: 2)
+        let jatisBanner2 = JatisBanner(_id: _id, tagBanner: 2,
+                                       images: images, enablePaging: true,
+                                       imageContentMode: .scaleAspectFill,
+                                       isImageTapped : true,
+                                       scrollDirection: .vertical,
+                                       size:self.secondBannerView.bounds.size,
+                                       cornerRadius: 20, aspectRatio: 1/1,
+                                       animate: true,animationInterval: 2)
         jatisBanner2.delegate = self
         self.secondBannerView.addSubview(jatisBanner2)
         
         //  3
         thirdBannerView.layoutIfNeeded()
-        let jatisBanner3 = JatisBanner(_id: _id, images: imagesPortrait, enablePaging: true,
-                                      imageContentMode: .scaleToFill,
-                                      isImageTapped : true,
-                                      scrollDirection: .horizontal,
-                                      size:self.thirdBannerView.bounds.size,
-                                      cornerRadius: 20, aspectRatio: 2/1,
-                                      animate: true,animationInterval: 1)
+        let jatisBanner3 = JatisBanner(_id: _id, tagBanner: 3,
+                                       images: imagesPortrait, enablePaging: true,
+                                       imageContentMode: .scaleToFill,
+                                       isImageTapped : true,
+                                       scrollDirection: .horizontal,
+                                       size:self.thirdBannerView.bounds.size,
+                                       cornerRadius: 20, aspectRatio: 2/1,
+                                       animate: true,animationInterval: 1)
         jatisBanner3.delegate = self
         self.thirdBannerView.addSubview(jatisBanner3)
         
         //  4
         fourthBannerView.layoutIfNeeded()
-        let jatisBanner4 = JatisBanner(_id: _id, images: imagesWide, enablePaging: true,
-                                      imageContentMode: .scaleToFill,
-                                      isImageTapped : true,
-                                      scrollDirection: .vertical,
-                                      size:self.fourthBannerView.bounds.size,
-                                      cornerRadius: 30, aspectRatio: 9/16,
-                                      animate: true,animationInterval: 2)
+        let jatisBanner4 = JatisBanner(_id: _id, tagBanner: 4,
+                                       images: imagesWide, enablePaging: true,
+                                       imageContentMode: .scaleToFill,
+                                       isImageTapped : true,
+                                       scrollDirection: .vertical,
+                                       size:self.fourthBannerView.bounds.size,
+                                       cornerRadius: 30, aspectRatio: 9/16,
+                                       animate: true,animationInterval: 2)
         jatisBanner4.delegate = self
         self.fourthBannerView.addSubview(jatisBanner4)
         
         //  5
         fifthBannerView.layoutIfNeeded()
-        let jatisBanner5 = JatisBanner(_id: _id, images: images, enablePaging: true,
+        let jatisBanner5 = JatisBanner(_id: _id, tagBanner: 5,
+                                       images: images, enablePaging: true,
                                       imageContentMode: .scaleAspectFill,
                                       isImageTapped : true,
                                       scrollDirection: .horizontal,
@@ -131,7 +137,8 @@ extension ViewController {
         
         //  6
         sixthBannerView.layoutIfNeeded()
-        let jatisBanner6 = JatisBanner(_id: _id, images: images, enablePaging: true,
+        let jatisBanner6 = JatisBanner(_id: _id, tagBanner: 6,
+                                       images: images, enablePaging: true,
                                       imageContentMode: .scaleAspectFill,
                                       isImageTapped : true,
                                       scrollDirection: .vertical,
@@ -184,9 +191,11 @@ extension ViewController {
 }
 
 extension ViewController : JatisBannerProtocol {
-    func didSelectBanner(_ data: String) {
-        print("\(data)")
+    func didSelectBanner(_ data: String, tagBanner  : Int) {
+        print("\(data) & \(tagBanner)")
     }
+    
+   
 }
 
 

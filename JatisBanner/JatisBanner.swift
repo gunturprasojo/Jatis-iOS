@@ -22,7 +22,7 @@ import UIKit
 //  This Protocol used to receive an action that if user press the image,
 //  then return a string that contains id of the image based on index of String (array types).
 public protocol JatisBannerProtocol: class {
-    func didSelectBanner(_ data: String)
+    func didSelectBanner(_ data: String, tagBanner : Int)
 }
 
 
@@ -34,6 +34,9 @@ open class JatisBanner:UIView{
     
     //  Create an array of String -> Id of an image.
     fileprivate var _id: [String]
+    
+    //  Create a tag to define which banner is clicked
+    fileprivate var tagBanner: Int
     
     //  Create a float type variable to set corner radius,
     //  that used to set the radius of the corner of a view.
@@ -63,12 +66,15 @@ open class JatisBanner:UIView{
     // Declare a delegate to receiver an action of collectionView
     public weak var delegate: JatisBannerProtocol?
     
-    required public init(_id:[String], images : [UIImage], enablePaging : Bool,
-                         imageContentMode : ContentMode, isImageTapped : Bool, scrollDirection: UICollectionView.ScrollDirection,
+    required public init(_id:[String], tagBanner : Int,
+                         images : [UIImage], enablePaging : Bool,
+                         imageContentMode : ContentMode, isImageTapped : Bool,
+                         scrollDirection: UICollectionView.ScrollDirection,
                          size:CGSize, cornerRadius: CGFloat, aspectRatio: CGFloat,
                          animate: Bool,animationInterval:Double)
     {
         self._id = _id
+        self.tagBanner = tagBanner
         self.images = images
         self.enablePaging = enablePaging
         
@@ -109,6 +115,7 @@ extension JatisBanner{
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "jatisBannerCellIdentifier")
+        collectionView.tag = self.tagBanner
         collectionView.reloadData()
         collectionView.isPagingEnabled = enablePaging
         collectionView.isScrollEnabled = true
@@ -149,7 +156,7 @@ extension JatisBanner: UICollectionViewDelegate, UICollectionViewDataSource{
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (isImageTapped){
-            delegate?.didSelectBanner(_id[indexPath.section])
+            delegate?.didSelectBanner(_id[indexPath.section], tagBanner: collectionView.tag)
         }
     }
     

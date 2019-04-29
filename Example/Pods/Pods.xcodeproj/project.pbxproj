@@ -15,6 +15,7 @@
 		654E3468F7332F275D10D5C7E1942FA5 /* JatisBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49DB0032C4F9B35E535B270C40421A /* JatisBanner.swift */; };
 		A28F776A54B06908F95153B84A4504B6 /* Pods-Jatis-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C808A0067EE5DA1938128E200DFE8C72 /* Pods-Jatis-iOS_Example-dummy.m */; };
 		B07A05B84D6693BBC53D8637A8A8B73E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		B842971C227713A800B2EDE5 /* JatisTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842971B227713A800B2EDE5 /* JatisTextField.swift */; };
 		B855413A2273002F00EFB665 /* JatisBannerExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85541392273002F00EFB665 /* JatisBannerExtensionCollectionView.swift */; };
 		B855413D2273005B00EFB665 /* JatisShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855413C2273005B00EFB665 /* JatisShadow.swift */; };
 		BD205F19DF96737C44F9516EF218A0B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
@@ -59,6 +60,8 @@
 		AFE0141919EF1B496F913B190B48CF1D /* Jatis-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Jatis-iOS.xcconfig"; sourceTree = "<group>"; };
 		B28072F5EE069FD52D94872B14498A22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B60EB5237BCAB88C994D9114F6FFDCBD /* Pods-Jatis-iOS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Tests-dummy.m"; sourceTree = "<group>"; };
+		B842971B227713A800B2EDE5 /* JatisTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JatisTextField.swift; sourceTree = "<group>"; };
+		B842972122771BA500B2EDE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B85541392273002F00EFB665 /* JatisBannerExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JatisBannerExtensionCollectionView.swift; sourceTree = "<group>"; };
 		B855413C2273005B00EFB665 /* JatisShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JatisShadow.swift; sourceTree = "<group>"; };
 		BEAB946072F32DCDE33C3577813FCC08 /* Pods-Jatis-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		85DFEF90E531938AFC6034CEAFD22744 /* Jatis-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B842971A2277139400B2EDE5 /* JatisTextField */,
 				B855413B2273004800EFB665 /* JatisView */,
 				B85541382273000400EFB665 /* JatisBanner */,
 				6B84D6C82403E0FFFB490E411F06F528 /* Pod */,
@@ -188,6 +192,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		B842971A2277139400B2EDE5 /* JatisTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B842971B227713A800B2EDE5 /* JatisTextField.swift */,
+			);
+			path = JatisTextField;
+			sourceTree = "<group>";
+		};
 		B85541382273000400EFB665 /* JatisBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B842972122771BA500B2EDE5 /* UIKit.framework */,
 				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
@@ -391,6 +404,7 @@
 				B855413D2273005B00EFB665 /* JatisShadow.swift in Sources */,
 				B855413A2273002F00EFB665 /* JatisBannerExtensionCollectionView.swift in Sources */,
 				654E3468F7332F275D10D5C7E1942FA5 /* JatisBanner.swift in Sources */,
+				B842971C227713A800B2EDE5 /* JatisTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
