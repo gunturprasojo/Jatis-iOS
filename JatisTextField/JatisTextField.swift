@@ -174,7 +174,8 @@ extension JatisTextField {
         
         if self.isUsePeekButton {
             buttonPeek.frame =  CGRect(x:self.bounds.size.width - 15, y: self.bounds.size.height/2 - 10, width: 20,height: 20)
-            let peekImage = UIImage(named: "peek.png")
+            let bundle = Bundle(for: JatisTextField.self)
+            let peekImage = UIImage(named: "peek.png",in: bundle, compatibleWith: nil)
             buttonPeek.contentMode = .scaleAspectFit
             buttonPeek.setImage(peekImage, for: .normal)
             buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)

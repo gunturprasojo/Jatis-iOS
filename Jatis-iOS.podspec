@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Jatis-iOS'
-  s.version          = '0.1.3'
+  s.version          = '0.1.2.1'
   s.summary          = 'A library for iOS project with Jatis Configuration'
 
 # This description is used to generate tags and improve search results.
@@ -42,7 +42,7 @@ A library iOS project with Jatis standard development guides.
   #  'Jatis-iOS' => ['Jatis-iOS/JatisTextField/AssetTextField/peek.png']
   # }
   
-  s.resources = 'JatisTextField/AssetTextField/peek.png'
+  s.resources = 'JatisTextField/AssetTextField/*.png'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'

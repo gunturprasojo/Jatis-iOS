@@ -3,24 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080545C228F892A89F4F33925150D9F5 /* JatisBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15A7A6B93225E0CD0A1B9324E13E /* JatisBanner.swift */; };
+		1DD775558D6851C5BD03BF8D703CFE1B /* Jatis-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC29D23933BC5F340EC0DAF05F2E2E00 /* Jatis-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25CC5BB8F5355E8B9D6256C853EA5E28 /* Pods-Jatis-iOS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B60EB5237BCAB88C994D9114F6FFDCBD /* Pods-Jatis-iOS_Tests-dummy.m */; };
-		32D633E06DA0A88F42CCCE170D8751B4 /* peek.png in Sources */ = {isa = PBXBuildFile; fileRef = 1901FD309E9B3351B55767FB335EC446 /* peek.png */; };
+		3985D743C0A4712A4D25F0579A87BF73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		41F164EA9C69060A38761AF1498F9673 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
 		43B3EAAA237E593F982A11CA89E8995D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		63CF3AB445A96F2397A501EEE905620C /* JatisBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */; };
 		64D6B714E0434D543EE741C8A1467577 /* Pods-Jatis-iOS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C8611F813227C1DDFFC090962757B0 /* Pods-Jatis-iOS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6501A22567B114A9DBFAB23FD3CF33DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		74A7A5F86A7DC5E1E356ECD965C8572F /* Jatis-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A0B66C40039FB3907E41FC265B3794 /* Jatis-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8197D0C7C05BDCB8E249335AC9D0579E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
-		A08B02811AC6106E1011EEFE66B9B84D /* JatisShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB83F0A39876251354845200D449F2C /* JatisShadow.swift */; };
+		79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
+		7E936057413FB4C444A9465015FFC2C7 /* JatisBannerExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */; };
+		7ED9F951918CF85A10281B4338CC9553 /* JatisShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */; };
+		957425763E244A03368784210FC82A19 /* peek.png in Sources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
+		9592B11712B1BA1EDF550253B077CF0A /* Jatis-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E927EFC93E2E2F3ABB61875AF57B734E /* Jatis-iOS-dummy.m */; };
 		A28F776A54B06908F95153B84A4504B6 /* Pods-Jatis-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C808A0067EE5DA1938128E200DFE8C72 /* Pods-Jatis-iOS_Example-dummy.m */; };
-		AEA95B647049623A4EC66F7E325E2D0A /* JatisTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFE80AD4C05FD1A833D46348F9E827 /* JatisTextField.swift */; };
 		B07A05B84D6693BBC53D8637A8A8B73E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		B9CE74E4F315ECCE47DB1FE1ECD79AC1 /* JatisBannerExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA9BBBB7E79054087BE205229B028C /* JatisBannerExtensionCollectionView.swift */; };
-		CD9892F4CE9785D7063F26A873E5C82E /* Jatis-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C413C31CA7E18D8D0FE9962B517DD8 /* Jatis-iOS-dummy.m */; };
+		D75AE5E078A39E638CA8D45738F564FC /* JatisTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4D5706FAA9CE3336FF3C39ACDA9EB /* JatisTextField.swift */; };
 		EB7B8ECFA510B4C32C66FB96F71E612E /* Pods-Jatis-iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88646056AAB7433099907D9C9C4DFD1B /* Pods-Jatis-iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -36,49 +37,49 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBA6931DB0E33A90AE1F3284608FFA08;
+			remoteGlobalIDString = 18DC76D3B5B9DAFF57FE98A1752A4A36;
 			remoteInfo = "Jatis-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0CA854E0D32D4F3DD8A08AC3C9568ABC /* Pods-Jatis-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0F214140434BDEA43748CE3A950EC310 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		1074C24774B811B4977CE671E80AC297 /* Pods-Jatis-iOS_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		18DA15A7A6B93225E0CD0A1B9324E13E /* JatisBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisBanner.swift; sourceTree = "<group>"; };
-		1901FD309E9B3351B55767FB335EC446 /* peek.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = peek.png; sourceTree = "<group>"; };
-		19C413C31CA7E18D8D0FE9962B517DD8 /* Jatis-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Jatis-iOS-dummy.m"; sourceTree = "<group>"; };
-		1AB87600CD201E469C43D88B234A7992 /* Pods_Jatis_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jatis_iOS_Tests.framework; path = "Pods-Jatis-iOS_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23A0B66C40039FB3907E41FC265B3794 /* Jatis-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-umbrella.h"; sourceTree = "<group>"; };
-		2B100BE7F813BFAAB00406D5AA6E06B7 /* Jatis-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-prefix.pch"; sourceTree = "<group>"; };
-		3079FDE91A6E0B1AEC37D34868B78FC1 /* Pods_Jatis_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jatis_iOS_Example.framework; path = "Pods-Jatis-iOS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB87600CD201E469C43D88B234A7992 /* Pods_Jatis_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jatis_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3079FDE91A6E0B1AEC37D34868B78FC1 /* Pods_Jatis_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jatis_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B7BB89A68096C907A0BE7471801779 /* Jatis-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Jatis-iOS.modulemap"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4AAA9BBBB7E79054087BE205229B028C /* JatisBannerExtensionCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisBannerExtensionCollectionView.swift; sourceTree = "<group>"; };
+		49867F11B6F17E2ED4876395E3CA0C95 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4C25AF475DC379FA9FF4FF491BE32ADE /* Pods-Jatis-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jatis-iOS_Example.modulemap"; sourceTree = "<group>"; };
-		58840D01A6F9726FA535C16D876FC1AB /* Jatis-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "Jatis-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5DB83F0A39876251354845200D449F2C /* JatisShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisShadow.swift; sourceTree = "<group>"; };
 		6A0F7EB48EFBF73B4DDFF8E6E8E96FA9 /* Pods-Jatis-iOS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Tests-Info.plist"; sourceTree = "<group>"; };
+		73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisShadow.swift; sourceTree = "<group>"; };
 		88646056AAB7433099907D9C9C4DFD1B /* Pods-Jatis-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jatis-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
+		894F72045076085CEA6C0978649AE156 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E04CABB502E22713F55FE52FF2F786B /* Pods-Jatis-iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jatis-iOS_Tests.modulemap"; sourceTree = "<group>"; };
-		933D5DE29A47C09531C584BCA23536C8 /* Jatis-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Jatis-iOS.modulemap"; sourceTree = "<group>"; };
 		951A4274F80A7993EEFAE40946AE8DB1 /* Pods-Jatis-iOS_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jatis-iOS_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		972705275AC5B704F9ED79B4951EA773 /* Jatis-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "Jatis-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		989A55405BF975B0EBBA960895C60D1B /* Pods-Jatis-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jatis-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FE61CE8EDC6ADDA51DD1687AAC98BBB /* Jatis-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Jatis-iOS-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFA073901C2DC2645345BDE980F3E4B9 /* Pods-Jatis-iOS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Example-Info.plist"; sourceTree = "<group>"; };
+		AFB4D5706FAA9CE3336FF3C39ACDA9EB /* JatisTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisTextField.swift; sourceTree = "<group>"; };
 		B60EB5237BCAB88C994D9114F6FFDCBD /* Pods-Jatis-iOS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Tests-dummy.m"; sourceTree = "<group>"; };
 		BEAB946072F32DCDE33C3577813FCC08 /* Pods-Jatis-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C2C8611F813227C1DDFFC090962757B0 /* Pods-Jatis-iOS_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jatis-iOS_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C4A1B716419DA47AD9740B5EC895979F /* peek.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = peek.png; path = ../../JatisTextField/AssetTextField/peek.png; sourceTree = SOURCE_ROOT; };
+		C706BFFCCA609FB414B0FF670657D767 /* Jatis-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-prefix.pch"; sourceTree = "<group>"; };
+		C7EEB0AD2770EA0B308C9973B778F80C /* Jatis-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Jatis-iOS-Info.plist"; sourceTree = "<group>"; };
 		C808A0067EE5DA1938128E200DFE8C72 /* Pods-Jatis-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Example-dummy.m"; sourceTree = "<group>"; };
-		CF5C8E8F3938A4A6DD8A49BC2C290A88 /* Jatis-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Jatis-iOS.xcconfig"; sourceTree = "<group>"; };
-		D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Jatis_iOS.framework; path = "Jatis-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jatis_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC29D23933BC5F340EC0DAF05F2E2E00 /* Jatis-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-umbrella.h"; sourceTree = "<group>"; };
 		DE5BCD2150CA3E95D7554A05D840E4A4 /* Pods-Jatis-iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		DFA570A0D3D858CF3EFB1756769588B3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E379FF0947B4E61C43F369155CBB6D2F /* Pods-Jatis-iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisBannerExtensionCollectionView.swift; sourceTree = "<group>"; };
+		E927EFC93E2E2F3ABB61875AF57B734E /* Jatis-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Jatis-iOS-dummy.m"; sourceTree = "<group>"; };
+		EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisBanner.swift; sourceTree = "<group>"; };
 		ECC27AB73457CAEFE30831AC3B1C0100 /* Pods-Jatis-iOS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jatis-iOS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF80D8142D19A264FD78D6355BC6BB81 /* Pods-Jatis-iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F7CFE80AD4C05FD1A833D46348F9E827 /* JatisTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisTextField.swift; sourceTree = "<group>"; };
+		F97C4A7395A6843CBC9C4806E7845BC3 /* Jatis-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Jatis-iOS.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,36 +99,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A531E399619ACDB63FDD0426F321E42A /* Frameworks */ = {
+		E2B06DBB23237FE6DE7B6A80A715F11A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6501A22567B114A9DBFAB23FD3CF33DE /* Foundation.framework in Frameworks */,
-				8197D0C7C05BDCB8E249335AC9D0579E /* UIKit.framework in Frameworks */,
+				3985D743C0A4712A4D25F0579A87BF73 /* Foundation.framework in Frameworks */,
+				41F164EA9C69060A38761AF1498F9673 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01C186987FB0A4DA99DD6FCBE12E2E56 /* AssetTextField */ = {
+		009DB432A7B2817C28437C12C9C2FA05 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1901FD309E9B3351B55767FB335EC446 /* peek.png */,
+				972705275AC5B704F9ED79B4951EA773 /* Jatis-iOS.podspec */,
+				49867F11B6F17E2ED4876395E3CA0C95 /* LICENSE */,
+				894F72045076085CEA6C0978649AE156 /* README.md */,
 			);
-			name = AssetTextField;
-			path = AssetTextField;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		10728AF9EDC3CF2EA0E70CBA07F41FFB /* Support Files */ = {
+		09B372E19090918E081A9347AD7C7A60 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				933D5DE29A47C09531C584BCA23536C8 /* Jatis-iOS.modulemap */,
-				CF5C8E8F3938A4A6DD8A49BC2C290A88 /* Jatis-iOS.xcconfig */,
-				19C413C31CA7E18D8D0FE9962B517DD8 /* Jatis-iOS-dummy.m */,
-				9FE61CE8EDC6ADDA51DD1687AAC98BBB /* Jatis-iOS-Info.plist */,
-				2B100BE7F813BFAAB00406D5AA6E06B7 /* Jatis-iOS-prefix.pch */,
-				23A0B66C40039FB3907E41FC265B3794 /* Jatis-iOS-umbrella.h */,
+				35B7BB89A68096C907A0BE7471801779 /* Jatis-iOS.modulemap */,
+				F97C4A7395A6843CBC9C4806E7845BC3 /* Jatis-iOS.xcconfig */,
+				E927EFC93E2E2F3ABB61875AF57B734E /* Jatis-iOS-dummy.m */,
+				C7EEB0AD2770EA0B308C9973B778F80C /* Jatis-iOS-Info.plist */,
+				C706BFFCCA609FB414B0FF670657D767 /* Jatis-iOS-prefix.pch */,
+				DC29D23933BC5F340EC0DAF05F2E2E00 /* Jatis-iOS-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Jatis-iOS";
@@ -141,47 +143,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3077BEDC63D69B389069025EA93D226A /* JatisBanner */ = {
+		3F220490E4942787841334D1006BD198 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				18DA15A7A6B93225E0CD0A1B9324E13E /* JatisBanner.swift */,
-				4AAA9BBBB7E79054087BE205229B028C /* JatisBannerExtensionCollectionView.swift */,
 			);
-			name = JatisBanner;
-			path = JatisBanner;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		30CADABB01DCADAF1AF942FCF5D4D579 /* Jatis-iOS */ = {
+		48437BB0A1F57AAAA57D53CE42433159 /* JatisTextField */ = {
 			isa = PBXGroup;
 			children = (
-				3077BEDC63D69B389069025EA93D226A /* JatisBanner */,
-				844FE6F8F79B05098E3A5EF47065FE50 /* JatisTextField */,
-				E495DAF9518E82449A010619A1A8AAB2 /* JatisView */,
-				6C3EF775AE983D5F8CF77A0AAE82BD2A /* Pod */,
-				10728AF9EDC3CF2EA0E70CBA07F41FFB /* Support Files */,
+				AFB4D5706FAA9CE3336FF3C39ACDA9EB /* JatisTextField.swift */,
+				C0158F7237DC28D70A0BAEBB9644D07A /* AssetTextField */,
 			);
-			name = "Jatis-iOS";
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		6C3EF775AE983D5F8CF77A0AAE82BD2A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				58840D01A6F9726FA535C16D876FC1AB /* Jatis-iOS.podspec */,
-				DFA570A0D3D858CF3EFB1756769588B3 /* LICENSE */,
-				0F214140434BDEA43748CE3A950EC310 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		844FE6F8F79B05098E3A5EF47065FE50 /* JatisTextField */ = {
-			isa = PBXGroup;
-			children = (
-				F7CFE80AD4C05FD1A833D46348F9E827 /* JatisTextField.swift */,
-				01C186987FB0A4DA99DD6FCBE12E2E56 /* AssetTextField */,
-			);
-			name = JatisTextField;
 			path = JatisTextField;
+			sourceTree = "<group>";
+		};
+		4C991C152EB016775E9621C67CA479A6 /* JatisView */ = {
+			isa = PBXGroup;
+			children = (
+				73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */,
+			);
+			path = JatisView;
+			sourceTree = "<group>";
+		};
+		8F81BF0259A4E5A887135859DE47BB6E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD1D61B22225A69AE16A2223F2567D7E /* Jatis-iOS */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		958C64946A17A57A730DFAB57B4D07CA /* Pods-Jatis-iOS_Example */ = {
@@ -217,6 +208,28 @@
 			path = "Target Support Files/Pods-Jatis-iOS_Tests";
 			sourceTree = "<group>";
 		};
+		BD1D61B22225A69AE16A2223F2567D7E /* Jatis-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D5512F33E35AD1F08478DE66A78160C7 /* JatisBanner */,
+				48437BB0A1F57AAAA57D53CE42433159 /* JatisTextField */,
+				4C991C152EB016775E9621C67CA479A6 /* JatisView */,
+				009DB432A7B2817C28437C12C9C2FA05 /* Pod */,
+				3F220490E4942787841334D1006BD198 /* Resources */,
+				09B372E19090918E081A9347AD7C7A60 /* Support Files */,
+			);
+			name = "Jatis-iOS";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0158F7237DC28D70A0BAEBB9644D07A /* AssetTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C4A1B716419DA47AD9740B5EC895979F /* peek.png */,
+			);
+			path = AssetTextField;
+			sourceTree = "<group>";
+		};
 		C3955086360C0B9A5CC4A87667AC4078 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,11 +243,20 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E74568F79312AF9BF2FFA24C9C694BB6 /* Development Pods */,
+				8F81BF0259A4E5A887135859DE47BB6E /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				E3E099F97110961FBCC3A0B21435E34C /* Products */,
 				C3955086360C0B9A5CC4A87667AC4078 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D5512F33E35AD1F08478DE66A78160C7 /* JatisBanner */ = {
+			isa = PBXGroup;
+			children = (
+				EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */,
+				E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */,
+			);
+			path = JatisBanner;
 			sourceTree = "<group>";
 		};
 		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
@@ -256,23 +278,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E495DAF9518E82449A010619A1A8AAB2 /* JatisView */ = {
-			isa = PBXGroup;
-			children = (
-				5DB83F0A39876251354845200D449F2C /* JatisShadow.swift */,
-			);
-			name = JatisView;
-			path = JatisView;
-			sourceTree = "<group>";
-		};
-		E74568F79312AF9BF2FFA24C9C694BB6 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				30CADABB01DCADAF1AF942FCF5D4D579 /* Jatis-iOS */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -284,19 +289,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADB307849A70DEE9B04AEA5472C07471 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74A7A5F86A7DC5E1E356ECD965C8572F /* Jatis-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B7E7B2B82332ED18B52F65D515C9C39E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				64D6B714E0434D543EE741C8A1467577 /* Pods-Jatis-iOS_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F875DC9D5B1657AD7A4D400E5B4CD0AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD775558D6851C5BD03BF8D703CFE1B /* Jatis-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,24 @@
 			productReference = 3079FDE91A6E0B1AEC37D34868B78FC1 /* Pods_Jatis_iOS_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		18DC76D3B5B9DAFF57FE98A1752A4A36 /* Jatis-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F532404AC82663D8836A70720571DD34 /* Build configuration list for PBXNativeTarget "Jatis-iOS" */;
+			buildPhases = (
+				F875DC9D5B1657AD7A4D400E5B4CD0AE /* Headers */,
+				5389C5A3666F0F2FE67F3C1EA7A2233F /* Sources */,
+				E2B06DBB23237FE6DE7B6A80A715F11A /* Frameworks */,
+				EDF5E28929EF43B85C07E6D39D9C96FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jatis-iOS";
+			productName = "Jatis-iOS";
+			productReference = D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C7BE2F1E44305A2B04CBE075973B37CD /* Pods-Jatis-iOS_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A209ED4199FFC9E9CC382C3137EBF0D /* Build configuration list for PBXNativeTarget "Pods-Jatis-iOS_Tests" */;
@@ -341,24 +364,6 @@
 			productReference = 1AB87600CD201E469C43D88B234A7992 /* Pods_Jatis_iOS_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CBA6931DB0E33A90AE1F3284608FFA08 /* Jatis-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 599BCF5E398A3EFD075C2A70968D326A /* Build configuration list for PBXNativeTarget "Jatis-iOS" */;
-			buildPhases = (
-				ADB307849A70DEE9B04AEA5472C07471 /* Headers */,
-				9928FB8C30B4BDE3E34935B32F3D8AB9 /* Sources */,
-				A531E399619ACDB63FDD0426F321E42A /* Frameworks */,
-				4EFF257724D9553C54B8FF03267127A8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Jatis-iOS";
-			productName = "Jatis-iOS";
-			productReference = D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -373,6 +378,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -380,7 +386,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBA6931DB0E33A90AE1F3284608FFA08 /* Jatis-iOS */,
+				18DC76D3B5B9DAFF57FE98A1752A4A36 /* Jatis-iOS */,
 				03442B22469D7CB045B0AB0C3B06CF43 /* Pods-Jatis-iOS_Example */,
 				C7BE2F1E44305A2B04CBE075973B37CD /* Pods-Jatis-iOS_Tests */,
 			);
@@ -395,13 +401,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EFF257724D9553C54B8FF03267127A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6C16C9C318BB2F5E309A3903E78FAE70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,19 +408,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDF5E28929EF43B85C07E6D39D9C96FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9928FB8C30B4BDE3E34935B32F3D8AB9 /* Sources */ = {
+		5389C5A3666F0F2FE67F3C1EA7A2233F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9892F4CE9785D7063F26A873E5C82E /* Jatis-iOS-dummy.m in Sources */,
-				080545C228F892A89F4F33925150D9F5 /* JatisBanner.swift in Sources */,
-				B9CE74E4F315ECCE47DB1FE1ECD79AC1 /* JatisBannerExtensionCollectionView.swift in Sources */,
-				A08B02811AC6106E1011EEFE66B9B84D /* JatisShadow.swift in Sources */,
-				AEA95B647049623A4EC66F7E325E2D0A /* JatisTextField.swift in Sources */,
-				32D633E06DA0A88F42CCCE170D8751B4 /* peek.png in Sources */,
+				9592B11712B1BA1EDF550253B077CF0A /* Jatis-iOS-dummy.m in Sources */,
+				63CF3AB445A96F2397A501EEE905620C /* JatisBanner.swift in Sources */,
+				7E936057413FB4C444A9465015FFC2C7 /* JatisBannerExtensionCollectionView.swift in Sources */,
+				7ED9F951918CF85A10281B4338CC9553 /* JatisShadow.swift in Sources */,
+				D75AE5E078A39E638CA8D45738F564FC /* JatisTextField.swift in Sources */,
+				957425763E244A03368784210FC82A19 /* peek.png in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +460,7 @@
 		B8838A9A82202EEAF80A6A660EEEE437 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Jatis-iOS";
-			target = CBA6931DB0E33A90AE1F3284608FFA08 /* Jatis-iOS */;
+			target = 18DC76D3B5B9DAFF57FE98A1752A4A36 /* Jatis-iOS */;
 			targetProxy = FCF16FCFE51B78AEAB72F88E87F37F0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -477,11 +484,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -516,11 +519,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -530,6 +529,39 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2C5FC8FCFB0224839EB89ACB4913578E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F97C4A7395A6843CBC9C4806E7845BC3 /* Jatis-iOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Jatis-iOS/Jatis-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Jatis_iOS;
+				PRODUCT_NAME = Jatis_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -619,11 +651,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -692,16 +720,15 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		972E6A53B765FC282A75D4A4631E153E /* Debug */ = {
+		AD8DCD5A52485262CCC03E9B670465BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF5C8E8F3938A4A6DD8A49BC2C290A88 /* Jatis-iOS.xcconfig */;
+			baseConfigurationReference = F97C4A7395A6843CBC9C4806E7845BC3 /* Jatis-iOS.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -717,11 +744,7 @@
 				INFOPLIST_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS.modulemap";
 				PRODUCT_MODULE_NAME = Jatis_iOS;
 				PRODUCT_NAME = Jatis_iOS;
@@ -734,43 +757,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		BCB654AADB7B6B9E38186B12E6EA09CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF5C8E8F3938A4A6DD8A49BC2C290A88 /* Jatis-iOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Jatis-iOS/Jatis-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Jatis_iOS;
-				PRODUCT_NAME = Jatis_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		CBEC6F4BE2DDF10B47BA0A06AC535838 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -790,11 +776,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -840,11 +822,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		599BCF5E398A3EFD075C2A70968D326A /* Build configuration list for PBXNativeTarget "Jatis-iOS" */ = {
+		F532404AC82663D8836A70720571DD34 /* Build configuration list for PBXNativeTarget "Jatis-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				972E6A53B765FC282A75D4A4631E153E /* Debug */,
-				BCB654AADB7B6B9E38186B12E6EA09CC /* Release */,
+				AD8DCD5A52485262CCC03E9B670465BA /* Debug */,
+				2C5FC8FCFB0224839EB89ACB4913578E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
