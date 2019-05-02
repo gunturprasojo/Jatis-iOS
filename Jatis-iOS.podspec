@@ -38,9 +38,11 @@ A library iOS project with Jatis standard development guides.
   
   #s.source_files  = 'Jatis-iOS/Classes/*.{h,m}'
   
-   s.resource_bundles = {
-     'Jatis-iOS' => ['Jatis-iOS/JatisTextField/AssetTextField/peek.png']
-   }
+  #   s.resource_bundles = {
+  #  'Jatis-iOS' => ['Jatis-iOS/JatisTextField/AssetTextField/peek.png']
+  # }
+  
+  s.resources = 'JatisTextField/AssetTextField/peek.png'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
