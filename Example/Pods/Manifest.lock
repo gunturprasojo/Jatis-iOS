@@ -1,5 +1,5 @@
 PODS:
-  - Jatis-iOS (0.1.0)
+  - Jatis-iOS (0.1.2.1)
 
 DEPENDENCIES:
   - Jatis-iOS (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Jatis-iOS: 726a2fea3566ded549cfc9ed1b6175788d190c74
+  Jatis-iOS: e000dcc742e1225fff67aa0607ceec035ea05499
 
 PODFILE CHECKSUM: 6fe90424dd11cb33d91ee6b988c3725abe02e583
 
