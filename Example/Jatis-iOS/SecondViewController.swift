@@ -23,12 +23,13 @@ class SecondViewController: UIViewController {
 
     func generateTextFieldView(){
         textFieldView.layoutIfNeeded()
-        let jatisTxtField = JatisTextField(tagTextfield: 2 ,textPlaceHolder: "placeholder",
-                                           isSecure: true, isUsePeekButton: true,
-                                           size: textFieldView.bounds.size,
-                                           fontPlaceholder: UIFont(name: "Futura",size: 12)!,
+        let jatisTxtField = JatisTextField(tagTextfield: 1, textPlaceHolder: "Placeholder",
+                                           textAlignment: .center, placeHolderTextAlignment: .center,
+                                           isSecure: false, isUsePeekButton: false,
+                                           size: self.textFieldView.bounds.size,
+                                           fontPlaceholder: UIFont(name: "Futura",size: 14)!,
                                            fontTextField: UIFont(name: "Helvetica", size: 14)!,
-                                           textColor: .red, placeHolderBeforeColor: .lightGray,
+                                           textColor:  .darkText  , placeHolderBeforeColor: .lightGray,
                                            placeHolderAfterColor: .darkText)
         jatisTxtField.delegate = self
         textFieldView.addSubview(jatisTxtField)
