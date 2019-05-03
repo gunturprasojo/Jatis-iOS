@@ -14,7 +14,6 @@
 		43B3EAAA237E593F982A11CA89E8995D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		63CF3AB445A96F2397A501EEE905620C /* JatisBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */; };
 		64D6B714E0434D543EE741C8A1467577 /* Pods-Jatis-iOS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C8611F813227C1DDFFC090962757B0 /* Pods-Jatis-iOS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
 		7E936057413FB4C444A9465015FFC2C7 /* JatisBannerExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */; };
 		7ED9F951918CF85A10281B4338CC9553 /* JatisShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */; };
 		957425763E244A03368784210FC82A19 /* peek.png in Sources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
@@ -412,7 +411,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
