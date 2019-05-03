@@ -77,15 +77,16 @@ override func viewDidLoad() {
     
 
 func generateTextFieldView(){
-    textFieldView.layoutIfNeeded()
-    let jatisTxtField = JatisTextField(tagTextfield: 1, textPlaceHolder: "placeholder",
-                                       size: textFieldView.bounds.size,
-                                       fontPlaceholder: UIFont(name: "Futura",size: 12)!,
-                                       fontTextField: UIFont(name: "Helvetica", size: 14)!,
-                                       textColor: .red, placeHolderBeforeColor: .lightGray,
-                                       placeHolderAfterColor: .darkText)
-    jatisTxtField.delegate = self
-    textFieldView.addSubview(jatisTxtField)
+     textFieldView.layoutIfNeeded()
+     let jatisTxtField = JatisTextField(tagTextfield: 2 ,textPlaceHolder: "placeholder",
+                                           isSecure: true, isUsePeekButton: true,
+                                           size: textFieldView.bounds.size,
+                                           fontPlaceholder: UIFont(name: "Futura",size: 12)!,
+                                           fontTextField: UIFont(name: "Helvetica", size: 14)!,
+                                           textColor: .red, placeHolderBeforeColor: .lightGray,
+                                           placeHolderAfterColor: .darkText)
+     jatisTxtField.delegate = self
+     textFieldView.addSubview(jatisTxtField)
 }
 ```
 
@@ -93,16 +94,22 @@ func generateTextFieldView(){
 ### 6. Action Handling TextField
 ```swift
 extension SecondViewController : JatisTextFieldProtocol {
-    func didJatisTextBeginEditing(_ data: UITextField) {
-        labelView.text = "begin" + data.text!
+  func didJatisTextBeginEditing(_ data: String, tagTextField: Int){
+        if tagTextField == 2 {
+            labelView.text = data
+        }
     }
-
-    func didJatisTextEndEditing(_ data: UITextField) {
-        labelView.text = data.text! + "end"
+    
+    func didJatisTextEndEditing(_ data: String, tagTextField: Int){
+        if tagTextField == 2 {
+            labelView.text = data + " end"
+        }
     }
-
-    func didJatisTextChange(_ data: UITextField) {
-        labelView.text = data.text!
+    
+    func didJatisTextChange(_ data: String, tagTextField: Int){
+        if tagTextField == 2 {
+            labelView.text = data
+        }
     }
 }
 ```
