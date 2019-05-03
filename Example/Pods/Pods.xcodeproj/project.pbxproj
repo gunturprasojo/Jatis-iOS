@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		43B3EAAA237E593F982A11CA89E8995D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		63CF3AB445A96F2397A501EEE905620C /* JatisBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */; };
 		64D6B714E0434D543EE741C8A1467577 /* Pods-Jatis-iOS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C8611F813227C1DDFFC090962757B0 /* Pods-Jatis-iOS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
 		7E936057413FB4C444A9465015FFC2C7 /* JatisBannerExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */; };
 		7ED9F951918CF85A10281B4338CC9553 /* JatisShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */; };
 		957425763E244A03368784210FC82A19 /* peek.png in Sources */ = {isa = PBXBuildFile; fileRef = C4A1B716419DA47AD9740B5EC895979F /* peek.png */; };
@@ -45,21 +44,21 @@
 /* Begin PBXFileReference section */
 		0CA854E0D32D4F3DD8A08AC3C9568ABC /* Pods-Jatis-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1074C24774B811B4977CE671E80AC297 /* Pods-Jatis-iOS_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1AB87600CD201E469C43D88B234A7992 /* Pods_Jatis_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jatis_iOS_Tests.framework; path = "Pods-Jatis-iOS_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3079FDE91A6E0B1AEC37D34868B78FC1 /* Pods_Jatis_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jatis_iOS_Example.framework; path = "Pods-Jatis-iOS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB87600CD201E469C43D88B234A7992 /* Pods_Jatis_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jatis_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3079FDE91A6E0B1AEC37D34868B78FC1 /* Pods_Jatis_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jatis_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B7BB89A68096C907A0BE7471801779 /* Jatis-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Jatis-iOS.modulemap"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		49867F11B6F17E2ED4876395E3CA0C95 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		49867F11B6F17E2ED4876395E3CA0C95 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4C25AF475DC379FA9FF4FF491BE32ADE /* Pods-Jatis-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jatis-iOS_Example.modulemap"; sourceTree = "<group>"; };
 		6A0F7EB48EFBF73B4DDFF8E6E8E96FA9 /* Pods-Jatis-iOS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Tests-Info.plist"; sourceTree = "<group>"; };
 		73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisShadow.swift; sourceTree = "<group>"; };
 		88646056AAB7433099907D9C9C4DFD1B /* Pods-Jatis-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jatis-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
-		894F72045076085CEA6C0978649AE156 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		894F72045076085CEA6C0978649AE156 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E04CABB502E22713F55FE52FF2F786B /* Pods-Jatis-iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jatis-iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		951A4274F80A7993EEFAE40946AE8DB1 /* Pods-Jatis-iOS_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jatis-iOS_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		972705275AC5B704F9ED79B4951EA773 /* Jatis-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "Jatis-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		972705275AC5B704F9ED79B4951EA773 /* Jatis-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "Jatis-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		989A55405BF975B0EBBA960895C60D1B /* Pods-Jatis-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jatis-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFA073901C2DC2645345BDE980F3E4B9 /* Pods-Jatis-iOS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Example-Info.plist"; sourceTree = "<group>"; };
 		AFB4D5706FAA9CE3336FF3C39ACDA9EB /* JatisTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JatisTextField.swift; sourceTree = "<group>"; };
 		B60EB5237BCAB88C994D9114F6FFDCBD /* Pods-Jatis-iOS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -69,7 +68,7 @@
 		C706BFFCCA609FB414B0FF670657D767 /* Jatis-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-prefix.pch"; sourceTree = "<group>"; };
 		C7EEB0AD2770EA0B308C9973B778F80C /* Jatis-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Jatis-iOS-Info.plist"; sourceTree = "<group>"; };
 		C808A0067EE5DA1938128E200DFE8C72 /* Pods-Jatis-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Example-dummy.m"; sourceTree = "<group>"; };
-		D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Jatis_iOS.framework; path = "Jatis-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76FE887DB6F328409C502614C239E22 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jatis_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC29D23933BC5F340EC0DAF05F2E2E00 /* Jatis-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-umbrella.h"; sourceTree = "<group>"; };
 		DE5BCD2150CA3E95D7554A05D840E4A4 /* Pods-Jatis-iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jatis-iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E379FF0947B4E61C43F369155CBB6D2F /* Pods-Jatis-iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +155,6 @@
 				AFB4D5706FAA9CE3336FF3C39ACDA9EB /* JatisTextField.swift */,
 				C0158F7237DC28D70A0BAEBB9644D07A /* AssetTextField */,
 			);
-			name = JatisTextField;
 			path = JatisTextField;
 			sourceTree = "<group>";
 		};
@@ -165,7 +163,6 @@
 			children = (
 				73FF99E367ABA2735DAFF534D411493D /* JatisShadow.swift */,
 			);
-			name = JatisView;
 			path = JatisView;
 			sourceTree = "<group>";
 		};
@@ -229,7 +226,6 @@
 			children = (
 				C4A1B716419DA47AD9740B5EC895979F /* peek.png */,
 			);
-			name = AssetTextField;
 			path = AssetTextField;
 			sourceTree = "<group>";
 		};
@@ -259,7 +255,6 @@
 				EAF76080CA805ABBD9B8F54008868886 /* JatisBanner.swift */,
 				E6E558C03465A41B888BF704AE33A6C3 /* JatisBannerExtensionCollectionView.swift */,
 			);
-			name = JatisBanner;
 			path = JatisBanner;
 			sourceTree = "<group>";
 		};
@@ -382,6 +377,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -415,7 +411,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79028F306172DDD9D07974B0411BA026 /* peek.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,11 +482,7 @@
 				INFOPLIST_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS.modulemap";
 				PRODUCT_MODULE_NAME = Jatis_iOS;
 				PRODUCT_NAME = Jatis_iOS;
@@ -523,11 +514,7 @@
 				INFOPLIST_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Jatis-iOS/Jatis-iOS.modulemap";
 				PRODUCT_MODULE_NAME = Jatis_iOS;
 				PRODUCT_NAME = Jatis_iOS;
@@ -595,8 +582,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -620,11 +606,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -723,11 +705,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -761,11 +739,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -800,11 +774,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.modulemap";
 				OTHER_LDFLAGS = "";
