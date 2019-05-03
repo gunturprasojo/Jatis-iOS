@@ -222,7 +222,7 @@ extension JatisTextField: UITextFieldDelegate {
 extension JatisTextField {
     private func minimizePlaceholder(){
         UIView.animate(withDuration: 0.15, animations: {
-            self.labelPlaceholder.frame = CGRect(x: 5, y: -(self.bounds.size.height/2), width:  self.bounds.size.width*0.25, height: self.bounds.size.height*0.5)// * 0.5)
+            self.labelPlaceholder.frame = CGRect(x: 5, y: -(self.bounds.size.height/2), width:  self.bounds.size.width*0.55, height: self.bounds.size.height*0.5)// * 0.5)
             
         })
         self.labelPlaceholder.font = UIFont(name: fontPlaceholder.fontName, size: fontPlaceholder.pointSize * 0.9)

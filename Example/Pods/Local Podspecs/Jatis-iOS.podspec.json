@@ -1,6 +1,6 @@
 {
   "name": "Jatis-iOS",
-  "version": "0.1.3",
+  "version": "0.1.2.2",
   "summary": "A library for iOS project with Jatis Configuration",
   "description": "A library iOS project with Jatis standard development guides.",
   "homepage": "https://github.com/gunturprasojo/Jatis-iOS",
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/gunturprasojo/Jatis-iOS.git",
-    "tag": "0.1.3"
+    "tag": "0.1.2.2"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "10.2"
   },
   "source_files": [
     "JatisView/**/*",
