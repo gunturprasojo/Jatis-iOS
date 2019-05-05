@@ -10,6 +10,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B8882CC8227EBEDB000C9050 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8882CC7227EBEDB000C9050 /* demo.gif */; };
 		B8929F88227C1305006FF011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		B8929F89227C1309006FF011 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		B8929F8A227C130C006FF011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		B842971D227715B200B2EDE5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B842971F22771B0B00B2EDE5 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Jatis_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85E394A227AD663005FBB46 /* Jatis_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Jatis_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8882CC7227EBEDB000C9050 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		D1C0379114515DAEAE75A74A /* Pods-Jatis-iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jatis-iOS_Tests.release.xcconfig"; path = "Target Support Files/Pods-Jatis-iOS_Tests/Pods-Jatis-iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E296467D1AECC0474C99FF08 /* Pods-Jatis-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jatis-iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-Jatis-iOS_Example/Pods-Jatis-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		B8417CDC2275D2250024736C /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				B8882CC7227EBEDB000C9050 /* demo.gif */,
 			);
 			name = Asset;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B8882CC8227EBEDB000C9050 /* demo.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
