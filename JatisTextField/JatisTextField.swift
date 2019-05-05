@@ -31,100 +31,67 @@ public protocol JatisTextFieldProtocol: class {
 open class JatisTextField: UIView {
     
     //  Create an Int type to define textfield tag.
-    fileprivate var tagTextfield: Int
+    open var tagTextfield: Int = 0
     
     //  Create a String type that contain placeholder text that want to show.
-    fileprivate var textPlaceholder : String
-    
-    //  Create a textalignment type that set Textfield text alignment.
-    fileprivate var textAlignment : NSTextAlignment
-    
-    //  Create a textalignment type that set placeholder text alignment.
-    fileprivate var placeHolderTextAlignment : NSTextAlignment
+    open var textPlaceholder : String = ""
     
     //  Create an UIFont type to define placeholder text font.
-    fileprivate var fontPlaceholder : UIFont
+    open var fontPlaceholder : UIFont = UIFont(name: "Helvetica", size: 12)!
+    
+    // create size variable to define the size of the textfield
+    open var size: CGSize = CGSize(width: 0, height: 0)
     
     //  Create an UIFont type to define textfield text font.
-    fileprivate var fontTextfield : UIFont
+    open var fontTextfield : UIFont  = UIFont(name: "Helvetica", size: 12)!
     
     //   Create an UIFont type to define placeholder text font.
-    fileprivate var textColor : UIColor
+    open var textColor : UIColor = .darkText
     
-    //  Create an bool type variable to define if Textfield is securetype or not.
-    fileprivate var isSecure : Bool
+    //  Create an bool type variable to define if Textfield is securetype or not
+    open var isSecure : Bool = false
     
-    //  Create an bool type variable to define if Textfield use peek button to show hidden char.
-    fileprivate var isUsePeekButton : Bool
+    //  Create an bool type variable to define if Textfield is securetype or not
+    open var isUsePeekButton : Bool = false
     
     //   Create a UIColor type to define placeholder text color before animated.
-    fileprivate var placeHolderBeforeColor : UIColor
+    open var placeHolderBeforeColor : UIColor = .gray
     
     //   Create an UIColor type to define placeholder after animated text font.
-    fileprivate var placeHolderAfterColor : UIColor
+    open var placeHolderAfterColor : UIColor = .darkText
     
     //   Create a bool type to define textfield use clear button or not.
-    fileprivate var useClearButton : Bool
+    open var useClearButton : Bool = true
     
     //   Create an UIColor type to define done button color above the keyboard.
-    fileprivate var doneButtonColor : UIColor
+    open var doneButtonColor : UIColor = .blue
     
     //   Create a border style type to define textfield borderstyle
-    fileprivate var borderStyle : UITextField.BorderStyle
+    open var borderStyle : UITextField.BorderStyle = .roundedRect
+    
     
     
     // Declare a delegate to receiver actions of textfield
     public weak var delegate: JatisTextFieldProtocol?
     
-    private let labelPlaceholder = UILabel()
-    private let textField = UITextField()
-    private let buttonPeek = UIButton()
+    open var labelPlaceholder = UILabel()
+    open var textField = UITextField()
+    open var buttonPeek = UIButton()
     
-    required public init(tagTextfield: Int,
-                         textPlaceHolder:String,
-                         textAlignment: NSTextAlignment, placeHolderTextAlignment : NSTextAlignment,
-                         isSecure:Bool, isUsePeekButton: Bool,
-                         size:CGSize,
-                         fontPlaceholder : UIFont = UIFont(name: "Helvetica", size: 12)!,
-                         fontTextField : UIFont = UIFont(name: "Helvetica", size: 12)!,
-                         textColor : UIColor = .black,
-                         placeHolderBeforeColor: UIColor = UIColor.lightGray,
-                         placeHolderAfterColor: UIColor = .blue,
-                         useClearButton : Bool = true, doneButtonColor : UIColor = .blue,
-                         borderStyle : UITextField.BorderStyle = UITextField.BorderStyle.roundedRect
-        )
-    {
-        
-        self.tagTextfield = tagTextfield
-        self.isSecure = isSecure
-        self.isUsePeekButton = isUsePeekButton
-        self.textPlaceholder = textPlaceHolder
-        self.textAlignment = textAlignment
-        self.placeHolderTextAlignment = placeHolderTextAlignment
-        self.labelPlaceholder.text = self.textPlaceholder
-        
-        self.fontPlaceholder = fontPlaceholder
-        self.fontTextfield = fontTextField
-        self.textColor = textColor
-        self.placeHolderBeforeColor = placeHolderBeforeColor
-        self.placeHolderAfterColor = placeHolderAfterColor
-        
-        self.useClearButton = useClearButton
-        self.doneButtonColor = doneButtonColor
-        self.borderStyle = borderStyle
-        
-        
-        super.init(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height));
+    
+    open func setJatisTextField(){
+        self.frame =  CGRect(x: 0, y: 0, width: size.width, height: size.height)
         self.layer.masksToBounds = false
-        
-        
+        //self.layer.cornerRadius = self.cornerRadius
         self.formatTextField()
-        return
     }
     
+    open func animatePlaceholderToTop(){
+        self.expandPlaceholder()
+    }
     
-    required public init?(coder aDecoder: NSCoder){
-        fatalError("init(coder:) has not been implemented")
+    open func animatePlaceholderToBottom(){
+        self.minimizePlaceholder()
     }
     
 }
@@ -132,31 +99,33 @@ open class JatisTextField: UIView {
 
 extension JatisTextField {
     private func formatTextField(){
-        self.textField.delegate = self
-        if self.isUsePeekButton {
-            self.textField.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width - 20, height: self.bounds.size.height)
-        }else {
-            self.textField.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
-        }
-        textField.textColor = self.textColor
-        if isSecure {
-            self.textField.isSecureTextEntry = true
-        }
-        
-        self.textField.textAlignment = self.textAlignment
-        self.labelPlaceholder.textAlignment = self.placeHolderTextAlignment
-        
-        
-        self.textField.tag = self.tagTextfield
-        self.labelPlaceholder.font = self.fontPlaceholder//UIFont(name: "Helvetica", size: self.bounds.size.height * 0.5)
+        textField.delegate = self
         
         if isUsePeekButton {
-            self.labelPlaceholder.frame = CGRect(x: 5, y: self.bounds.origin.y/2+2, width: self.bounds.size.width-30, height: self.bounds.size.height-5)
+            textField.frame = CGRect(x: 0, y: 0, width: self.size.width - 30, height: self.size.height)
         }else {
-            self.labelPlaceholder.frame = CGRect(x: 5, y: self.bounds.origin.y/2+2, width: self.bounds.size.width-8, height: self.bounds.size.height-5)
+            textField.frame = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
         }
-        self.labelPlaceholder.backgroundColor = .clear
-        self.labelPlaceholder.textColor = self.placeHolderBeforeColor
+        
+        
+        
+        textField.textColor = self.textColor
+        
+        
+        if isSecure {
+            textField.isSecureTextEntry = true
+            
+            
+        }
+        textField.tag = self.tagTextfield
+        
+        labelPlaceholder.text = textPlaceholder
+        labelPlaceholder.font = fontPlaceholder
+        labelPlaceholder.frame = CGRect(x: 5, y: self.bounds.origin.y/2+2, width: self.size.width-8, height: self.size.height-5)
+        //labelPlaceholder.frame = CGRect(x: 0, y: 10, width: self.size.width-8, height: self.size.height-5)
+        // self.labelPlaceholder.backgroundColor = .clear
+        labelPlaceholder.textColor = self.placeHolderBeforeColor
+        
         self.formateKeyboardOption()
         self.addSubview(textField)
         self.addSubview(labelPlaceholder)
@@ -190,9 +159,8 @@ extension JatisTextField {
         textField.borderStyle = self.borderStyle
         
         if self.isUsePeekButton {
-            buttonPeek.frame =  CGRect(x:self.bounds.size.width - 15, y: self.bounds.size.height/2 - 10, width: 20,height: 20)
-            let bundle = Bundle(for: JatisTextField.self)
-            let peekImage = UIImage(named: "peek.png",in: bundle, compatibleWith: nil)
+            buttonPeek.frame =  CGRect(x:self.bounds.size.width - 25, y: self.bounds.size.height/2 - 10, width: 20,height: 20)
+            let peekImage = UIImage(named: "eye.png")
             buttonPeek.contentMode = .scaleAspectFit
             buttonPeek.setImage(peekImage, for: .normal)
             buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)
@@ -237,7 +205,7 @@ extension JatisTextField: UITextFieldDelegate {
 }
 
 extension JatisTextField {
-    private func minimizePlaceholder(){
+    public func minimizePlaceholder(){
         UIView.animate(withDuration: 0.15, animations: {
             if self.isUsePeekButton {
                 self.labelPlaceholder.frame = CGRect(x: 5, y: -(self.bounds.size.height/2), width:  self.bounds.size.width-35, height: self.bounds.size.height*0.5)// *
@@ -252,7 +220,7 @@ extension JatisTextField {
         
     }
     
-    private func expandPlaceholder(){
+    public func expandPlaceholder(){
         UIView.animate(withDuration: 0.15, animations: {
             if self.isUsePeekButton {
                 self.labelPlaceholder.frame = CGRect(x: 5, y: self.bounds.origin.y/2+2, width: self.bounds.size.width-30, height: self.bounds.size.height-5)
