@@ -94,6 +94,14 @@ open class JatisTextField: UIView {
         self.minimizePlaceholder()
     }
     
+    open func customPeekButtonWithImage(image: UIImage){
+        buttonPeek.contentMode = .scaleAspectFit
+        buttonPeek.setImage(image, for: .normal)
+        buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)
+        buttonPeek.addTarget(self, action: #selector(unPeekTextfield), for: [.touchUpInside, .touchUpOutside])
+        buttonPeek.setTitleColor(.white, for: .normal)
+    }
+    
 }
 
 
@@ -160,7 +168,8 @@ extension JatisTextField {
         
         if self.isUsePeekButton {
             buttonPeek.frame =  CGRect(x:self.bounds.size.width - 25, y: self.bounds.size.height/2 - 10, width: 20,height: 20)
-            let peekImage = UIImage(named: "eye.png")
+            let bundle = Bundle(for: JatisTextField.self)
+            let peekImage = UIImage(named: "peek.png",in: bundle, compatibleWith: nil)
             buttonPeek.contentMode = .scaleAspectFit
             buttonPeek.setImage(peekImage, for: .normal)
             buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)
