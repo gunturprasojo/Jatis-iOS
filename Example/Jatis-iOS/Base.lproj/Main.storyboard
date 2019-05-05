@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,67 +23,35 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-Vl-t1t">
                                 <rect key="frame" x="20" y="89" width="335" height="188.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mlc-Vl-t1t" secondAttribute="height" multiplier="16:9" id="3y8-VK-bM3"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLo-xN-rrJ" userLabel="secondView">
-                                <rect key="frame" x="20" y="293" width="150.5" height="150.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gim-rX-5Xo" userLabel="loginView">
+                                <rect key="frame" x="20" y="330" width="335" height="37"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QLo-xN-rrJ" secondAttribute="height" multiplier="1:1" id="SN0-f7-QNB"/>
+                                    <constraint firstAttribute="height" constant="37" id="40d-1j-Xbb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKa-Qu-tGu" userLabel="thirdView">
-                                <rect key="frame" x="194.5" y="293" width="160.5" height="320.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rKa-Qu-tGu" secondAttribute="height" multiplier="1:2" id="XzI-pL-Civ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-f0-gZk" userLabel="fourthView">
-                                <rect key="frame" x="28.5" y="455" width="133.5" height="75"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9ZT-f0-gZk" secondAttribute="height" multiplier="16:9" id="y8y-Jw-rcg"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kt-Y5-wiO" userLabel="fifthView">
-                                <rect key="frame" x="28.5" y="545" width="66.5" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1Kt-Y5-wiO" secondAttribute="height" multiplier="4:3" id="KD5-rV-oTM"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAg-Wg-unu" userLabel="sixthView">
-                                <rect key="frame" x="108" y="545" width="50.5" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XAg-Wg-unu" secondAttribute="height" multiplier="1:1" id="v4h-ei-bgE"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYc-iF-BZj" userLabel="passwordView">
+                                <rect key="frame" x="20" y="402" width="335" height="37"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rKa-Qu-tGu" firstAttribute="top" secondItem="QLo-xN-rrJ" secondAttribute="top" id="0fR-Py-fFO"/>
-                            <constraint firstItem="1Kt-Y5-wiO" firstAttribute="width" secondItem="9ZT-f0-gZk" secondAttribute="height" multiplier="8:9" id="32E-Qa-g4z"/>
                             <constraint firstItem="mlc-Vl-t1t" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="4zx-xE-31a"/>
-                            <constraint firstItem="XAg-Wg-unu" firstAttribute="leading" secondItem="1Kt-Y5-wiO" secondAttribute="trailing" constant="13" id="5W1-J4-CqN"/>
-                            <constraint firstItem="QLo-xN-rrJ" firstAttribute="leading" secondItem="mlc-Vl-t1t" secondAttribute="leading" id="5cN-rc-xAr"/>
                             <constraint firstItem="mlc-Vl-t1t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="6qf-v2-a5Z"/>
-                            <constraint firstItem="9ZT-f0-gZk" firstAttribute="centerX" secondItem="QLo-xN-rrJ" secondAttribute="centerX" id="7cI-eB-wKr"/>
-                            <constraint firstItem="9ZT-f0-gZk" firstAttribute="width" secondItem="QLo-xN-rrJ" secondAttribute="height" multiplier="8:9" id="9nN-AU-6SL"/>
+                            <constraint firstItem="qYc-iF-BZj" firstAttribute="height" secondItem="Gim-rX-5Xo" secondAttribute="height" id="96v-aE-NT3"/>
+                            <constraint firstItem="Gim-rX-5Xo" firstAttribute="width" secondItem="mlc-Vl-t1t" secondAttribute="width" id="ACK-ct-fKC"/>
                             <constraint firstAttribute="trailing" secondItem="mlc-Vl-t1t" secondAttribute="trailing" constant="20" id="Dmv-jb-Ryg"/>
-                            <constraint firstItem="rKa-Qu-tGu" firstAttribute="width" secondItem="mlc-Vl-t1t" secondAttribute="height" multiplier="40:47" id="MUo-du-gmG"/>
-                            <constraint firstItem="1Kt-Y5-wiO" firstAttribute="leading" secondItem="9ZT-f0-gZk" secondAttribute="leading" id="P09-ie-3cn"/>
-                            <constraint firstItem="1Kt-Y5-wiO" firstAttribute="top" secondItem="9ZT-f0-gZk" secondAttribute="bottom" constant="15" id="RDL-qd-QZa"/>
-                            <constraint firstItem="XAg-Wg-unu" firstAttribute="width" secondItem="9ZT-f0-gZk" secondAttribute="height" multiplier="2:3" id="aeg-tT-ZuX"/>
-                            <constraint firstItem="QLo-xN-rrJ" firstAttribute="width" secondItem="mlc-Vl-t1t" secondAttribute="height" multiplier="75:94" id="bG2-fM-rvm"/>
-                            <constraint firstItem="XAg-Wg-unu" firstAttribute="top" secondItem="9ZT-f0-gZk" secondAttribute="bottom" constant="15" id="tpr-fp-3k5"/>
-                            <constraint firstItem="9ZT-f0-gZk" firstAttribute="top" secondItem="QLo-xN-rrJ" secondAttribute="bottom" constant="11.5" id="uMH-0F-rJ4"/>
-                            <constraint firstItem="QLo-xN-rrJ" firstAttribute="top" secondItem="mlc-Vl-t1t" secondAttribute="bottom" constant="15.5" id="xTg-Oc-yZY"/>
-                            <constraint firstItem="rKa-Qu-tGu" firstAttribute="trailing" secondItem="mlc-Vl-t1t" secondAttribute="trailing" id="xtS-qA-wEk"/>
+                            <constraint firstItem="qYc-iF-BZj" firstAttribute="width" secondItem="Gim-rX-5Xo" secondAttribute="width" id="EPE-y9-kW9"/>
+                            <constraint firstItem="Gim-rX-5Xo" firstAttribute="centerX" secondItem="mlc-Vl-t1t" secondAttribute="centerX" id="W4c-Sa-nHn"/>
+                            <constraint firstItem="qYc-iF-BZj" firstAttribute="centerX" secondItem="Gim-rX-5Xo" secondAttribute="centerX" id="bUU-VM-91y"/>
+                            <constraint firstItem="Gim-rX-5Xo" firstAttribute="top" secondItem="mlc-Vl-t1t" secondAttribute="bottom" constant="52.5" id="cIq-RL-k1q"/>
+                            <constraint firstItem="qYc-iF-BZj" firstAttribute="top" secondItem="Gim-rX-5Xo" secondAttribute="bottom" constant="35" id="upA-EX-i5A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jatis iOS" id="Xpy-G0-uEI">
@@ -94,12 +63,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="fifthBannerView" destination="1Kt-Y5-wiO" id="r9F-r1-Ld4"/>
                         <outlet property="firstBannerView" destination="mlc-Vl-t1t" id="wIo-Hn-GSR"/>
-                        <outlet property="fourthBannerView" destination="9ZT-f0-gZk" id="z3z-TL-uMj"/>
-                        <outlet property="secondBannerView" destination="QLo-xN-rrJ" id="ddW-kj-KOD"/>
-                        <outlet property="sixthBannerView" destination="XAg-Wg-unu" id="Z4a-CX-Znq"/>
-                        <outlet property="thirdBannerView" destination="rKa-Qu-tGu" id="xqT-aT-et7"/>
+                        <outlet property="passwordView" destination="qYc-iF-BZj" id="vpH-nR-eAg"/>
+                        <outlet property="usernameView" destination="Gim-rX-5Xo" id="uVE-IC-26h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

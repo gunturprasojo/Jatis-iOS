@@ -22,7 +22,7 @@ import UIKit
 //  This Protocol used to receive an action that if user press the image,
 //  then return a string that contains id of the image based on index of String (array types).
 public protocol JatisBannerProtocol: class {
-    func didSelectBanner(_ data: String)
+    func didSelectBanner(_ data: String , tagBanner: Int)
 }
 
 
@@ -127,7 +127,7 @@ extension JatisBanner: UICollectionViewDelegate, UICollectionViewDataSource{
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (isImageTapped){
-            delegate?.didSelectBanner(_id[indexPath.section])
+            delegate?.didSelectBanner(_id[indexPath.section], tagBanner: collectionView.tag)
         }
     }
     
