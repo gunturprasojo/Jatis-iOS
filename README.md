@@ -13,7 +13,7 @@
 Jatis-iOS is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 ```ruby
-pod 'Jatis-iOS'
+pod 'Jatis-iOS' , '0.2.0'
 ```
 
 ## Feature
@@ -32,17 +32,23 @@ import Jatis_iOS
 
 ### 2. Adding banner : 
 ```swift
+let jatisBanner = JatisBanner()
 firstBannerView.layoutIfNeeded()
-let jatisBanner1 = JatisBanner(_id: _id, tagBanner: 1,
-                                 images: images, enablePaging: true,
-                                imageContentMode: .scaleAspectFill,
-                                isImageTapped : true,
-                                scrollDirection: .horizontal,
-                                size:self.firstBannerView.bounds.size,
-                                cornerRadius: 20, aspectRatio: 9/16,
-                                animate: true,animationInterval: 3)
-jatisBanner1.delegate = self
-self.firstBannerView.addSubview(jatisBanner1)
+        jatisBanner.images = images
+        jatisBanner._id = _id
+        jatisBanner.aspectRatio = 9/16
+        jatisBanner.animate = true
+        jatisBanner.cornerRadius = 20
+        jatisBanner.size = firstBannerView.bounds.size
+        jatisBanner.animationInterval = 3.0
+        jatisBanner.reloadBanner()
+        firstBannerView.addSubview(jatisBanner)
+        firstBannerView.addRoundShadow(fillColor: .white, cornerRadius: 20, 
+                    shadowColor: .black, shadowOpacity: 0.9, shadowOffSet: CGSize(width: 4, height: 5), 
+                    shadowRadius: 15, scale: 1)
+        jatisBanner.tag = 1
+        jatisBanner.delegate = self
+        self.firstBannerView.addSubview(jatisBanner)
 ```
 
 ### 3. Adding shadow : 
@@ -77,39 +83,37 @@ override func viewDidLoad() {
     
 
 func generateTextFieldView(){
-     textFieldView.layoutIfNeeded()
-     let jatisTxtField = JatisTextField(tagTextfield: 2 ,textPlaceHolder: "placeholder",
-                                           isSecure: true, isUsePeekButton: true,
-                                           size: textFieldView.bounds.size,
-                                           fontPlaceholder: UIFont(name: "Futura",size: 12)!,
-                                           fontTextField: UIFont(name: "Helvetica", size: 14)!,
-                                           textColor: .red, placeHolderBeforeColor: .lightGray,
-                                           placeHolderAfterColor: .darkText)
-     jatisTxtField.delegate = self
-     textFieldView.addSubview(jatisTxtField)
+      var usernameTextfield = JatisTextField()
+      usernameView.layoutIfNeeded()
+      usernameTextfield.tagTextfield = 1
+      usernameTextfield.textPlaceholder = "Username"
+      usernameTextfield.size = usernameView.bounds.size
+      usernameTextfield.fontPlaceholder = UIFont(name: "Futura", size: 14)!
+      usernameTextfield.textColor = .darkText
+      usernameTextfield.doneButtonColor = .blue
+      usernameTextfield.placeHolderBeforeColor = .lightGray
+      usernameTextfield.labelPlaceholder.textAlignment = .left
+      usernameTextfield.textField.textAlignment = .left
+      usernameTextfield.delegate = self
+      usernameTextfield.setJatisTextField()
+      usernameView.addSubview(usernameTextfield)
 }
 ```
 
 
 ### 6. Action Handling TextField
 ```swift
-extension SecondViewController : JatisTextFieldProtocol {
-  func didJatisTextBeginEditing(_ data: String, tagTextField: Int){
-        if tagTextField == 2 {
-            labelView.text = data
-        }
+extension ViewController : JatisTextFieldProtocol {
+   func didJatisTextBeginEditing(_ data: String, tagTextField: Int) {
+      
     }
     
-    func didJatisTextEndEditing(_ data: String, tagTextField: Int){
-        if tagTextField == 2 {
-            labelView.text = data + " end"
-        }
+    func didJatisTextEndEditing(_ data: String, tagTextField: Int) {
+      
     }
     
-    func didJatisTextChange(_ data: String, tagTextField: Int){
-        if tagTextField == 2 {
-            labelView.text = data
-        }
+    func didJatisTextChange(_ data: String, tagTextField: Int) {
+       
     }
 }
 ```
