@@ -58,13 +58,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.generateBannerView()
         self.generateShadow()
+        self.generateTextfield()
     }
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let destination = segue.destination as? SecondViewController
+        self.view.endEditing(true)
+        
+        if segue.identifier == "segueNext" {
+            destination?.dataUsername = stringUsername
+            destination?.dataPassword = stringPassword
+        }
+        
     }
 
 }
@@ -74,8 +80,6 @@ extension ViewController {
     
     
     func generateBannerView(){
-        
-        //  1
         firstBannerView.layoutIfNeeded()
         jatisBanner.images = images
         jatisBanner._id = _id
@@ -86,24 +90,21 @@ extension ViewController {
         jatisBanner.animationInterval = 3.0
         jatisBanner.reloadBanner()
         firstBannerView.addSubview(jatisBanner)
-        firstBannerView.addRoundShadow(fillColor: .white, cornerRadius: 20, shadowColor: .gray, shadowOpacity: 0.9, shadowOffSet: CGSize(width: 5, height: 5), shadowRadius: 5, scale: 1.5)
+        firstBannerView.addRoundShadow(fillColor: .white, cornerRadius: 20, shadowColor: .black, shadowOpacity: 0.9, shadowOffSet: CGSize(width: 4, height: 5), shadowRadius: 15, scale: 1)
         jatisBanner.tag = 1
         jatisBanner.delegate = self
         self.firstBannerView.addSubview(jatisBanner)
-        
-     
-        
     }
     
+    
     func generateShadow(){
-        
         firstBannerView.addRoundShadow(fillColor: .white,
-                               cornerRadius: 50,
-                               shadowColor: .black,
-                               shadowOpacity: 0.8,
-                               shadowOffSet: CGSize(width: -5, height: 2),
-                               shadowRadius: 5,
-                               scale: 1)
+                           cornerRadius: 50,
+                           shadowColor: .black,
+                           shadowOpacity: 0.8,
+                           shadowOffSet: CGSize(width: -5, height: 2),
+                           shadowRadius: 5,
+                           scale: 1)
     }
     
     func generateTextfield(){
@@ -111,10 +112,12 @@ extension ViewController {
         usernameTextfield.tagTextfield = 1
         usernameTextfield.textPlaceholder = "Username"
         usernameTextfield.size = usernameView.bounds.size
-        usernameTextfield.fontPlaceholder = UIFont(name: "Futura", size: 10)!
+        usernameTextfield.fontPlaceholder = UIFont(name: "Futura", size: 14)!
         usernameTextfield.textColor = .darkText
-        usernameTextfield.doneButtonColor = .orange
+        usernameTextfield.doneButtonColor = .blue
         usernameTextfield.placeHolderBeforeColor = .lightGray
+        usernameTextfield.labelPlaceholder.textAlignment = .left
+        usernameTextfield.textField.textAlignment = .left
         usernameTextfield.delegate = self
         usernameTextfield.setJatisTextField()
         usernameView.addSubview(usernameTextfield)
@@ -122,18 +125,19 @@ extension ViewController {
         
         passwordView.layoutIfNeeded()
         passwordTextfield.tagTextfield = 2
+        passwordTextfield.isUsePeekButton = true
         passwordTextfield.isSecure = true
-        passwordTextfield.isUsePeekButton = false
+        passwordTextfield.isUsePeekButton = true
         passwordTextfield.textPlaceholder = "Password"
         passwordTextfield.size = passwordView.bounds.size
-        passwordTextfield.fontPlaceholder = UIFont(name: "Futura", size: 10)!
+        passwordTextfield.fontPlaceholder = UIFont(name: "Futura", size: 14)!
         passwordTextfield.textColor = .darkText
-        passwordTextfield.doneButtonColor = .orange
         passwordTextfield.placeHolderBeforeColor = .lightGray
         passwordTextfield.delegate = self
-        passwordTextfield.labelPlaceholder.textAlignment = .center
-        passwordTextfield.textField.textAlignment = .center
+        passwordTextfield.labelPlaceholder.textAlignment = .left
+        passwordTextfield.textField.textAlignment = .left
         passwordTextfield.setJatisTextField()
+        passwordTextfield.doneButtonColor = .blue
         passwordView.addSubview(passwordTextfield)
     }
 }
@@ -141,13 +145,24 @@ extension ViewController {
 extension ViewController : JatisBannerProtocol, JatisTextFieldProtocol {
     
     func didJatisTextBeginEditing(_ data: String, tagTextField: Int) {
-        if(tagTextField == 2 ){
-            print("password textfield : \(data)")
-        }
+        self.setValueUsernamePassword(data: data, tag: tagTextField)
     }
     
     func didJatisTextEndEditing(_ data: String, tagTextField: Int) {
-        switch tagTextField {
+        self.setValueUsernamePassword(data: data, tag: tagTextField)
+    }
+    
+    func didJatisTextChange(_ data: String, tagTextField: Int) {
+        self.setValueUsernamePassword(data: data, tag: tagTextField)
+    }
+ 
+    func didSelectBanner(_ data: String, tagBanner  : Int) {
+        print("\(data) & \(tagBanner)")
+    }
+    
+    
+    func setValueUsernamePassword(data : String, tag: Int){
+        switch tag {
         case 1:
             stringUsername = data
             break
@@ -158,24 +173,6 @@ extension ViewController : JatisBannerProtocol, JatisTextFieldProtocol {
             break
         }
     }
-    
-    func didJatisTextChange(_ data: String, tagTextField: Int) {
-        
-        if tagTextField == 1{
-            print(data )
-            print(data)
-        }
-        
-        print(data)
-    }
-    
-    
- 
-    func didSelectBanner(_ data: String, tagBanner  : Int) {
-        print("\(data) & \(tagBanner)")
-    }
-    
    
 }
-
 

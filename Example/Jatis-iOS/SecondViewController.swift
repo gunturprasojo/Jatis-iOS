@@ -11,8 +11,17 @@ import Jatis_iOS
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var labelUsername: UILabel!
+    @IBOutlet var labelPassword: UILabel!
+    
+    var dataUsername: String = ""
+    var dataPassword: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelUsername.text = dataUsername
+        labelPassword.text = dataPassword
     }
     
 
