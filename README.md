@@ -5,9 +5,9 @@
 
 
 ## Requirements
-* iOS 12.0
+* iOS 10.2 (Minimum) - iOS 12.2 (Recommended)
 * Swift 4.2
-* XCode 10.2
+* XCode 10
 
 ## Installation
 Jatis-iOS is available through [CocoaPods](https://cocoapods.org). To install
@@ -122,7 +122,7 @@ extension ViewController : JatisTextFieldProtocol {
 GIF Demo
 ==========
 <p align="center">
-  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/initialView.gif" 
+  <img src ="https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/demo.gif" 
        width="279" height="570"/>
 </p>
 
