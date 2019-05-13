@@ -69,6 +69,21 @@ open class JatisTextField: UIView {
     //   Create a border style type to define textfield borderstyle
     open var borderStyle : UITextField.BorderStyle = .roundedRect
     
+    //  Create a bool type to set the underline below the textfield
+    open var isUnderlined : Bool = false
+    
+    //  Create an underline view variable below the textfield
+    open var underline = UIView()
+    
+    //  Create a color for underline before active text editing variable below the textfield
+    open var underlineColorBefore : UIColor = .gray
+    
+    //  Create a color for underline after active text editing below the textfield
+    open var underlineColorAfter : UIColor = .blue
+    
+     //  Create a size for underline after active text editing below the textfield
+    open var underlineHeight : CGFloat = 1.0
+    
     
     
     // Declare a delegate to receiver actions of textfield
@@ -142,6 +157,12 @@ extension JatisTextField {
             self.addSubview(buttonPeek)
         }
         
+        if self.isUnderlined {
+            underline.frame = CGRect(x: 0, y: self.bounds.origin.y + self.size.height - 1, width: self.size.width, height: self.underlineHeight)
+            underline.backgroundColor = underlineColorBefore
+            self.addSubview(underline)
+        }
+        
     }
     
     private func formateKeyboardOption(){
@@ -199,12 +220,18 @@ extension JatisTextField: UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.delegate?.didJatisTextBeginEditing(textField.text!, tagTextField: textField.tag)
         self.minimizePlaceholder()
+        if isUnderlined {
+            self.underlineStateOn()
+        }
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
         self.delegate?.didJatisTextEndEditing(textField.text!, tagTextField: textField.tag)
         if(textField.text?.count == 0){
             self.expandPlaceholder()
+        }
+        if isUnderlined {
+            self.underlineStateOf()
         }
     }
     
@@ -239,5 +266,26 @@ extension JatisTextField {
         })
         self.labelPlaceholder.font = fontPlaceholder
         labelPlaceholder.textColor = self.placeHolderBeforeColor
+    }
+    
+    
+    public func underlineStateOn(){
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: [.curveEaseInOut , .allowUserInteraction],
+                       animations: {
+                        self.underline.backgroundColor = self.underlineColorAfter
+        })
+        
+        
+    }
+    
+    public func underlineStateOf(){
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: [.curveEaseInOut , .allowUserInteraction],
+                       animations: {
+                        self.underline.backgroundColor = self.underlineColorBefore
+        })
     }
 }
