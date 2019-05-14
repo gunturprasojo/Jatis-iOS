@@ -84,6 +84,9 @@ open class JatisTextField: UIView {
      //  Create a size for underline after active text editing below the textfield
     open var underlineHeight : CGFloat = 1.0
     
+    //  Create a timeinterval for underline animation duration below the textfield
+    open var underlineAnimationDuration : CGFloat = 0.25
+    
     
     
     // Declare a delegate to receiver actions of textfield
@@ -270,7 +273,7 @@ extension JatisTextField {
     
     
     public func underlineStateOn(){
-        UIView.animate(withDuration: 0.5,
+        UIView.animate(withDuration: TimeInterval(underlineAnimationDuration),
                        delay: 0.0,
                        options: [.curveEaseInOut , .allowUserInteraction],
                        animations: {
@@ -281,7 +284,7 @@ extension JatisTextField {
     }
     
     public func underlineStateOf(){
-        UIView.animate(withDuration: 0.5,
+        UIView.animate(withDuration: TimeInterval(underlineAnimationDuration),
                        delay: 0.0,
                        options: [.curveEaseInOut , .allowUserInteraction],
                        animations: {
