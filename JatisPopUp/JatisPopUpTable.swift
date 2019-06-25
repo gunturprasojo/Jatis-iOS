@@ -127,7 +127,7 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelect(strings[indexPath.row])
+        delegate?.didSelect(strings[indexPath.row], row: indexPath.row)
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -163,7 +163,7 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
 }
 
 public protocol JatisPopUpTableProtocol: class {
-    func didSelect(_ data: String)
+    func didSelect(_ data: String , row : Int)
 }
 
 
