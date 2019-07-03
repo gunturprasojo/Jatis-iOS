@@ -18,11 +18,34 @@ class SecondViewController: UIViewController {
     var dataUsername: String = ""
     var dataPassword: String = ""
     
+    let popUpTable = JatisPopUpTable()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelUsername.text = dataUsername
         labelPassword.text = dataPassword
     }
     
-
+    @IBAction func actButton(_ sender: Any) {
+        popUpTable.parentSize = self.view.frame.size
+        popUpTable.tableSize = CGSize(width: 300, height: 300)
+        popUpTable.center = self.view.center
+        popUpTable.strings = ["a","b","c"]
+        popUpTable.title = "aaa"
+        popUpTable.maximumDisplayedCell = 3
+        popUpTable.formatPopUp()
+        popUpTable.delegate = self
+        self.view.addSubview(popUpTable)
+    }
+    
+    
 }
+
+
+extension SecondViewController: JatisPopUpTableProtocol {
+    func didSelect(_ data: String, row : Int) {
+        print(data)
+        self.popUpTable.removeFromSuperview()
+    }
+}
+

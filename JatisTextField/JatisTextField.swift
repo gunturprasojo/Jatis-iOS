@@ -23,6 +23,7 @@ public protocol JatisTextFieldProtocol: class {
     func didJatisTextBeginEditing(_ data: String, tagTextField: Int)
     func didJatisTextEndEditing(_ data: String, tagTextField: Int)
     func didJatisTextChange(_ data: String, tagTextField: Int)
+    func didJatisTextShouldEnd(_ data : String, tagTextField: Int) -> Bool
 }
 
 
@@ -69,24 +70,18 @@ open class JatisTextField: UIView {
     //   Create a border style type to define textfield borderstyle
     open var borderStyle : UITextField.BorderStyle = .roundedRect
     
-    //  Create a bool type to set the underline below the textfield
+    //   Create a bool type to define textfield use clear button or not.
+    open var shouldClearTextfield : Bool = true
+    
     open var isUnderlined : Bool = false
     
-    //  Create an underline view variable below the textfield
     open var underline = UIView()
     
-    //  Create a color for underline before active text editing variable below the textfield
     open var underlineColorBefore : UIColor = .gray
     
-    //  Create a color for underline after active text editing below the textfield
     open var underlineColorAfter : UIColor = .blue
     
-     //  Create a size for underline after active text editing below the textfield
     open var underlineHeight : CGFloat = 1.0
-    
-    //  Create a timeinterval for underline animation duration below the textfield
-    open var underlineAnimationDuration : CGFloat = 0.25
-    
     
     
     // Declare a delegate to receiver actions of textfield
@@ -110,14 +105,6 @@ open class JatisTextField: UIView {
     
     open func animatePlaceholderToBottom(){
         self.minimizePlaceholder()
-    }
-    
-    open func customPeekButtonWithImage(image: UIImage){
-        buttonPeek.contentMode = .scaleAspectFit
-        buttonPeek.setImage(image, for: .normal)
-        buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)
-        buttonPeek.addTarget(self, action: #selector(unPeekTextfield), for: [.touchUpInside, .touchUpOutside])
-        buttonPeek.setTitleColor(.white, for: .normal)
     }
     
 }
@@ -192,8 +179,7 @@ extension JatisTextField {
         
         if self.isUsePeekButton {
             buttonPeek.frame =  CGRect(x:self.bounds.size.width - 25, y: self.bounds.size.height/2 - 10, width: 20,height: 20)
-            let bundle = Bundle(for: JatisTextField.self)
-            let peekImage = UIImage(named: "peek.png",in: bundle, compatibleWith: nil)
+            let peekImage = UIImage(named: "eye.png")
             buttonPeek.contentMode = .scaleAspectFit
             buttonPeek.setImage(peekImage, for: .normal)
             buttonPeek.addTarget(self, action: #selector(self.peekTextfield), for: .touchDown)
@@ -213,6 +199,7 @@ extension JatisTextField {
     @objc private func unPeekTextfield(_ sender: UIButton) {
         self.textField.isSecureTextEntry = true
     }
+    
 }
 
 
@@ -241,6 +228,11 @@ extension JatisTextField: UITextFieldDelegate {
     @objc func textFieldDidChange(textField: UITextField) {
         self.delegate?.didJatisTextChange(textField.text!, tagTextField: textField.tag)
     }
+    
+    public func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return self.delegate?.didJatisTextShouldEnd(textField.text! , tagTextField: textField.tag) ?? shouldClearTextfield
+        return shouldClearTextfield
+    }
 }
 
 extension JatisTextField {
@@ -251,7 +243,6 @@ extension JatisTextField {
             }else {
                 self.labelPlaceholder.frame = CGRect(x: 5, y: -(self.bounds.size.height/2), width:  self.bounds.size.width-5, height: self.bounds.size.height*0.5)// * 0.5)
             }
-            
         })
         self.labelPlaceholder.font = UIFont(name: fontPlaceholder.fontName, size: fontPlaceholder.pointSize * 0.9)
         labelPlaceholder.textColor = self.placeHolderAfterColor
@@ -269,11 +260,12 @@ extension JatisTextField {
         })
         self.labelPlaceholder.font = fontPlaceholder
         labelPlaceholder.textColor = self.placeHolderBeforeColor
+        
     }
     
-    
     public func underlineStateOn(){
-        UIView.animate(withDuration: TimeInterval(underlineAnimationDuration),
+        //        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: [.curveEaseInOut , .allowUserInteraction],
                        animations: {
@@ -284,7 +276,8 @@ extension JatisTextField {
     }
     
     public func underlineStateOf(){
-        UIView.animate(withDuration: TimeInterval(underlineAnimationDuration),
+        //        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: [.curveEaseInOut , .allowUserInteraction],
                        animations: {

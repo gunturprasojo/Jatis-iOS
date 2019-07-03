@@ -10,6 +10,13 @@ import UIKit
 
 open class JatisPopUpTable: UIView {
     
+    /*
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
     
     //  Create an array type of String that want to show.
     open var strings: [String] = []
@@ -58,6 +65,22 @@ open class JatisPopUpTable: UIView {
     // Create variable string to set title close
     open var closeButtonTitle : String = "x"
     
+    
+    //===== update .2
+    
+    // Create variable to set is scrollable table
+    open var isScrollable : Bool = false
+    
+    // Create variable to set color separator betweeen title and cell
+    open var separatorTitleColor : UIColor = .gray
+    
+    // Create variable to set height of separator betweeen title and cell
+    open var separatorTitleHeight : CGFloat = 0.5
+    
+    // Create variable to set height of separator betweeen title and cell
+    open var maximumDisplayedCell : CGFloat = 5
+    
+    
     // Declare a delegate to receiver an action of tableview
     public weak var delegate: JatisPopUpTableProtocol?
     
@@ -68,7 +91,7 @@ open class JatisPopUpTable: UIView {
     
     open var selectionStyle : UITableViewCell.SelectionStyle = .blue
     
-    open func formaPopUp(){
+    open func formatPopUp(){
         self.frame =  CGRect(x: 0, y: 0, width: parentSize.width, height: parentSize.height)
         self.layer.masksToBounds = true
         let gray = UIColor.darkGray.withAlphaComponent(0.5)
@@ -78,7 +101,16 @@ open class JatisPopUpTable: UIView {
         self.formatTableView()
     }
     
+    private func generateActions(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(singleTap(sender:)))
+        self.addGestureRecognizer(tap)
+    }
     
+    @objc private func singleTap(sender: UITapGestureRecognizer? = nil) {
+        if(sender?.numberOfTouches == 1){
+            self.removeFromSuperview()
+        }
+    }
     
 }
 
@@ -103,6 +135,9 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
             closeButton.setTitleColor(self.closeButtonColor, for: .normal)
             viewSection.addSubview(closeButton)
         }
+        let separatorSection = UIView(frame: CGRect(x: 0, y: self.titleHeight, width:self.tableView.frame.size.width, height: separatorTitleHeight))
+        separatorSection.backgroundColor = separatorTitleColor
+        viewSection.addSubview(separatorSection)
         return viewSection
     }
     
@@ -135,11 +170,12 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     }
     
     private func formatTableView(){
-        self.tableView = UITableView(frame: CGRect(x: parentSize.width/2 - self.tableSize.width/2, y:  parentSize.height/2 - self.tableSize.height/2, width: self.tableSize.width, height: self.cellHeight * CGFloat(strings.count) + self.titleHeight), style: .plain)
+        let heightTable = self.maximumDisplayedCell * self.cellHeight + self.titleHeight
+        self.tableView = UITableView(frame: CGRect(x: parentSize.width/2 - self.tableSize.width/2, y:  parentSize.height/2 - self.tableSize.height/2, width: self.tableSize.width, height: heightTable), style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "jatisPopUpTableCell")
-        tableView.isScrollEnabled = false
+        tableView.isScrollEnabled = isScrollable
         self.addSubview(tableView)
         self.tableView.layer.cornerRadius = self.cornerRadius
         self.tableView.clipsToBounds = true

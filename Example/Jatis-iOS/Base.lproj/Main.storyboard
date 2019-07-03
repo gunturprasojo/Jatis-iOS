@@ -102,16 +102,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-jf-Uvo">
+                                <rect key="frame" x="136" y="451" width="103" height="30"/>
+                                <state key="normal" title="Show Me More"/>
+                                <connections>
+                                    <action selector="actButton:" destination="lMf-pK-7Hm" eventType="touchUpInside" id="8Fx-fQ-QXJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Aer-ic-a2C" firstAttribute="centerX" secondItem="wLc-JB-BMm" secondAttribute="centerX" id="2ez-U0-CLP"/>
                             <constraint firstItem="Aer-ic-a2C" firstAttribute="top" secondItem="GVp-WT-enL" secondAttribute="bottom" constant="53" id="F7b-IT-Gqj"/>
                             <constraint firstItem="dnb-Bx-46r" firstAttribute="top" secondItem="Aer-ic-a2C" secondAttribute="bottom" constant="58.5" id="FW9-yu-Ke2"/>
+                            <constraint firstItem="cBn-jf-Uvo" firstAttribute="centerX" secondItem="fNW-DL-ORr" secondAttribute="centerX" id="PHw-Xc-F4r"/>
                             <constraint firstItem="fNW-DL-ORr" firstAttribute="top" secondItem="dnb-Bx-46r" secondAttribute="bottom" constant="36" id="RaR-UY-Nwb"/>
                             <constraint firstItem="dnb-Bx-46r" firstAttribute="centerX" secondItem="Aer-ic-a2C" secondAttribute="centerX" id="Scc-vd-pxk"/>
                             <constraint firstItem="Aer-ic-a2C" firstAttribute="width" secondItem="wLc-JB-BMm" secondAttribute="width" multiplier="0.7" id="THK-L3-e9O"/>
                             <constraint firstItem="fNW-DL-ORr" firstAttribute="centerX" secondItem="dnb-Bx-46r" secondAttribute="centerX" id="iB0-mg-wcK"/>
+                            <constraint firstItem="cBn-jf-Uvo" firstAttribute="top" secondItem="fNW-DL-ORr" secondAttribute="bottom" constant="50" id="j0q-Ia-XV2"/>
                         </constraints>
                     </view>
                     <connections>
