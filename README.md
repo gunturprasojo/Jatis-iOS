@@ -13,7 +13,7 @@
 Jatis-iOS is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 ```ruby
-pod 'Jatis-iOS' , '0.2.0'
+pod 'Jatis-iOS' , '0.2.3.3'
 ```
 
 ## Feature
