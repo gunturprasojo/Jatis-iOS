@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Jatis-iOS'
-  s.version          = '0.2.3.2'
+  s.version          = '0.2.3.3'
   s.summary          = 'A library for iOS project with Jatis Configuration'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ A library iOS project with Jatis standard development guides.
   
   s.platform = :ios, '10.2'
   
-  s.source_files =  'JatisView/**/*', 'JatisBanner/**/*' , 'JatisTextField/**/*' , 'JatisPopUp/**/*'
+  s.source_files =  'JatisView/**/*', 'JatisBanner/**/*' , 'JatisTextField/**/*' , 'JatisTextView/**/*' , 'JatisPopUp/**/*'
   
   s.swift_version = '4.2'
   
