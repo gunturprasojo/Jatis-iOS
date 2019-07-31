@@ -231,7 +231,6 @@ extension JatisTextField: UITextFieldDelegate {
     
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return self.delegate?.didJatisTextShouldEnd(textField.text! , tagTextField: textField.tag) ?? shouldClearTextfield
-        return shouldClearTextfield
     }
 }
 
