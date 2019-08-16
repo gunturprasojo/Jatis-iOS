@@ -24,7 +24,7 @@ A library iOS project with Jatis standard development guides.
   s.homepage         = 'https://github.com/gunturprasojo/Jatis-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Guntur Budi' => 'guntur.prasojo@jatis.com' }
+  s.author           = { 'Guntur Budi' => 'guntur.prasojo@jatis.com' , 'Tirta AR' => 'tirta.rivaldi@pji-solutions.com'}
   s.source           = { :git => 'https://github.com/gunturprasojo/Jatis-iOS.git', :tag => s.version.to_s }
   
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
