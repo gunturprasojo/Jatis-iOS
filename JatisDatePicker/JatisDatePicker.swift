@@ -18,9 +18,9 @@ open class JatisDatePicker: UIView {
     static var datePicker = UIDatePicker()
     static var toolBar = UIToolbar()
     
-    static weak var delegate: JatisDatePickerDelegate?
+    public static weak var delegate: JatisDatePickerDelegate?
     
-    class func show(_ minDate: Date?,_ maxDate: Date?){
+    open class func show(_ minDate: Date?,_ maxDate: Date?){
         //Check if datepicker view is exist on View Controller
         if view.isDescendant(of: UIApplication.topViewController()!.view) {
             return
@@ -72,7 +72,7 @@ open class JatisDatePicker: UIView {
     }
     
     //Action when click Done
-    @objc class func doneClick() {
+    @objc open class func doneClick() {
         //selectedDate?(datePicker.date)
         delegate?.getSelectedDate(date: datePicker.date)
         cancelClick()
@@ -80,7 +80,7 @@ open class JatisDatePicker: UIView {
     }
     
     //Action when click Cancel
-    @objc class func cancelClick() {
+    @objc open class func cancelClick() {
         view.animHide({(res) in
             view.removeFromSuperview()
         })
