@@ -251,6 +251,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Author
 
 Guntur Budi, guntur.prasojo@jatis.com
+Tirta AR, tirta.rivaldi@pji-solutions.com
 
 ## License
 
