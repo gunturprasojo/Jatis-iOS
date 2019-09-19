@@ -21,6 +21,8 @@ pod 'Jatis-iOS' , '0.2.4.1' ~> Latest update of JatisDatePicker
 * Banner
 * Shadow
 * Textfield
+* Textview
+* DatePicker
 
 ## Overview
 * [Advanced API](https://github.com/gunturprasojo/Jatis-iOS/blob/master/Example/Jatis-iOS/ViewController.swift)
