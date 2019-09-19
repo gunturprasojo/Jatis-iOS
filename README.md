@@ -240,6 +240,8 @@ extension ViewController : JatisTextFieldProtocol {
 
 ### 9. Action Handling For JatisDatePicker
 ```swift
+class DatePickerVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         JatisDatePicker.delegate = self
@@ -250,6 +252,8 @@ extension ViewController : JatisTextFieldProtocol {
         JatisDatePicker.animationTime = 0.25
         JatisDatePicker.show(nil, nil)
     }
+    
+}
     
     
 extension DatePickerVC: JatisDatePickerDelegate {
