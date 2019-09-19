@@ -15,6 +15,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Jatis-iOS' , '0.2.3.2' -> Stable With Textfield
 pod 'Jatis-iOS' , '0.2.3.4'
+pod 'Jatis-iOS' , '0.2.4.1' ~> Stable Feature JatisDatePicker
 ```
 
 ## Feature
@@ -233,6 +234,29 @@ extension ViewController : JatisTextFieldProtocol {
        
     }
 }
+```
+
+
+### 9. Action Handling For JatisDatePicker
+```swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        JatisDatePicker.delegate = self
+    }
+    
+    @IBAction func showDatePicker(_ sender: UIButton) {
+        JatisDatePicker.tintButtonColor = .red
+        JatisDatePicker.animationTime = 0.25
+        JatisDatePicker.show(nil, nil)
+    }
+    
+    
+extension DatePickerVC: JatisDatePickerDelegate {
+    func getSelectedDate(date: Date) {
+        lbDate.text = date.convertTo(format: "dd-MMM-yyyy")
+    }
+}
+
 ```
 
 
