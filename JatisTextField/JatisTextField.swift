@@ -241,18 +241,12 @@ extension JatisTextField {
         UIView.animate(withDuration: 0.15, animations: {
             self.setPlaceholderToTop(isPeekable: self.isUsePeekButton)
         })
-        self.labelPlaceholder.font = UIFont(name: fontPlaceholder.fontName, size: fontPlaceholder.pointSize * 0.9)
-        labelPlaceholder.textColor = self.placeHolderAfterColor
-        
-        
     }
     
     public func expandPlaceholder(){
         UIView.animate(withDuration: 0.15, animations: {
             self.setPlaceholderToBottom(isPeekable: self.isUsePeekButton)
         })
-        self.labelPlaceholder.font = fontPlaceholder
-        labelPlaceholder.textColor = self.placeHolderBeforeColor
         
     }
     
@@ -262,6 +256,8 @@ extension JatisTextField {
         }else {
             self.labelPlaceholder.frame = CGRect(x: 5, y: self.bounds.origin.y/2+2, width: self.bounds.size.width-8, height: self.bounds.size.height-5)
         }
+        self.labelPlaceholder.font = fontPlaceholder
+        labelPlaceholder.textColor = self.placeHolderBeforeColor
     }
     
     public func setPlaceholderToTop(isPeekable : Bool){
@@ -270,6 +266,9 @@ extension JatisTextField {
         }else {
             self.labelPlaceholder.frame = CGRect(x: 5, y: -(self.bounds.size.height/2), width:  self.bounds.size.width-5, height: self.bounds.size.height*0.5)// * 0.5)
         }
+        
+        self.labelPlaceholder.font = UIFont(name: fontPlaceholder.fontName, size: fontPlaceholder.pointSize * 0.9)
+        labelPlaceholder.textColor = self.placeHolderAfterColor
     }
     
     public func underlineStateOn(){
