@@ -18,12 +18,12 @@ open class JatisDatePicker: UIView {
     static var datePicker = UIDatePicker()
     static var toolBar = UIToolbar()
     
-    static public var tintButtonColor : UIColor = .darkGray
-    static public var animationTime : Double = 0.25
+    public static var tintButtonColor : UIColor = .darkGray
+    public static var animationTime : Double = 0.25
     
-    static weak var delegate: JatisDatePickerDelegate?
+    public static weak var delegate: JatisDatePickerDelegate?
     
-    class func show(_ minDate: Date?,_ maxDate: Date?){
+    public static func show(_ minDate: Date?,_ maxDate: Date?){
         //Check if datepicker view is exist on View Controller
         if view.isDescendant(of: UIApplication.topViewController()!.view) {
             return
