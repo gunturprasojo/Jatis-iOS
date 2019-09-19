@@ -18,9 +18,12 @@ open class JatisDatePicker: UIView {
     static var datePicker = UIDatePicker()
     static var toolBar = UIToolbar()
     
-    public static weak var delegate: JatisDatePickerDelegate?
+    static public var tintButtonColor : UIColor = .darkGray
+    static public var animationTime : Double = 0.25
     
-    open class func show(_ minDate: Date?,_ maxDate: Date?){
+    static weak var delegate: JatisDatePickerDelegate?
+    
+    class func show(_ minDate: Date?,_ maxDate: Date?){
         //Check if datepicker view is exist on View Controller
         if view.isDescendant(of: UIApplication.topViewController()!.view) {
             return
@@ -50,7 +53,7 @@ open class JatisDatePicker: UIView {
         toolBar = UIToolbar(frame: CGRect(x: 0, y: self.datePicker.frame.origin.y - 40, width: view.frame.size.width, height: 40))
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.tintColor = self.tintButtonColor//UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
         toolBar.sizeToFit()
         
         // Adding Button ToolBar
@@ -72,7 +75,7 @@ open class JatisDatePicker: UIView {
     }
     
     //Action when click Done
-    @objc open class func doneClick() {
+    @objc class func doneClick() {
         //selectedDate?(datePicker.date)
         delegate?.getSelectedDate(date: datePicker.date)
         cancelClick()
@@ -80,7 +83,7 @@ open class JatisDatePicker: UIView {
     }
     
     //Action when click Cancel
-    @objc open class func cancelClick() {
+    @objc class func cancelClick() {
         view.animHide({(res) in
             view.removeFromSuperview()
         })
