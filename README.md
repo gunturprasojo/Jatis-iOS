@@ -13,8 +13,8 @@
 Jatis-iOS is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 ```ruby
-pod 'Jatis-iOS' , '0.2.3.4' ~> Latest update of JatisTextView
-pod 'Jatis-iOS' , '0.2.4.1' ~> Latest update of JatisDatePicker
+pod 'Jatis-iOS' , '0.2.3.4' ~> Update of JatisTextView
+pod 'Jatis-iOS' , '0.2.4.1' ~> Update of JatisDatePicker
 ```
 
 ## Feature
