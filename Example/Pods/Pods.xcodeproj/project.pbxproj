@@ -73,7 +73,7 @@
 		B8FB4EBA22C2315F0026097C /* JatisPopUpTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JatisPopUpTable.swift; sourceTree = "<group>"; };
 		BEAB946072F32DCDE33C3577813FCC08 /* Pods-Jatis-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jatis-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C2C8611F813227C1DDFFC090962757B0 /* Pods-Jatis-iOS_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jatis-iOS_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C4A1B716419DA47AD9740B5EC895979F /* peek.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = peek.png; sourceTree = "<group>"; };
+		C4A1B716419DA47AD9740B5EC895979F /* peek.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = peek.png; path = ../../JatisTextField/AssetTextField/peek.png; sourceTree = SOURCE_ROOT; };
 		C706BFFCCA609FB414B0FF670657D767 /* Jatis-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jatis-iOS-prefix.pch"; sourceTree = "<group>"; };
 		C7EEB0AD2770EA0B308C9973B778F80C /* Jatis-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Jatis-iOS-Info.plist"; sourceTree = "<group>"; };
 		C808A0067EE5DA1938128E200DFE8C72 /* Pods-Jatis-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jatis-iOS_Example-dummy.m"; sourceTree = "<group>"; };

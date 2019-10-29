@@ -81,14 +81,18 @@ open class JatisPopUpTable: UIView {
     open var maximumDisplayedCell : CGFloat = 5
     
     
+    //===== update .3
+    // Create Variable to set this view is with/without header title or not
+    open var isUseHeaderTitle : Bool = true
+    
+    open var isMandatory : Bool = true
+    
+    
     // Declare a delegate to receiver an action of tableview
     public weak var delegate: JatisPopUpTableProtocol?
     
-    
     open var tableView = UITableView()
-    
     open var closeButton = UIButton()
-    
     open var selectionStyle : UITableViewCell.SelectionStyle = .blue
     
     open func formatPopUp(){
@@ -98,6 +102,11 @@ open class JatisPopUpTable: UIView {
         self.backgroundColor = gray
         self.layer.masksToBounds = true
         self.layer.cornerRadius = self.cornerRadius
+        
+        if isMandatory {
+            self.generateActions()
+        }
+        
         self.formatTableView()
     }
     
@@ -121,6 +130,7 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     }
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if self.isUseHeaderTitle {
         let viewSection = UIView(frame: CGRect(x: 0, y: 0, width:self.tableView.frame.size.width, height: self.titleHeight))
         let titleLbl = UILabel(frame: CGRect(x: 0, y: 0, width:self.tableView.frame.size.width, height: self.titleHeight))
         viewSection.backgroundColor = titleBackroundColor
@@ -139,6 +149,9 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
         separatorSection.backgroundColor = separatorTitleColor
         viewSection.addSubview(separatorSection)
         return viewSection
+        }else {
+            return nil
+        }
     }
     
     @objc func close(){
@@ -146,7 +159,11 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.titleHeight
+        if self.isUseHeaderTitle {
+            return self.titleHeight
+        }else {
+            return 0
+        }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -170,8 +187,18 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     }
     
     private func formatTableView(){
-        let heightTable = self.maximumDisplayedCell * self.cellHeight + self.titleHeight
-        self.tableView = UITableView(frame: CGRect(x: parentSize.width/2 - self.tableSize.width/2, y:  parentSize.height/2 - self.tableSize.height/2, width: self.tableSize.width, height: heightTable), style: .plain)
+        
+        var heightTable : CGFloat = 0
+        let yPos : CGFloat = parentSize.height/2 - self.tableSize.height/2
+        let xPos : CGFloat = parentSize.width/2 - self.tableSize.width/2
+        
+        if self.isUseHeaderTitle {
+            heightTable = self.maximumDisplayedCell * self.cellHeight + self.titleHeight
+        }else {
+            heightTable = maximumDisplayedCell * cellHeight
+        }
+        
+        self.tableView = UITableView(frame: CGRect(x: xPos , y: yPos , width: self.tableSize.width, height: heightTable), style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "jatisPopUpTableCell")
@@ -185,7 +212,7 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
         }else {
             tableView.allowsSelection = false
         }
-        
+        tableView.backgroundColor = .blue
         tableView.reloadData()
     }
     
@@ -196,6 +223,7 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
     open func formatCloseButton(){
         
     }
+    
 }
 
 public protocol JatisPopUpTableProtocol: class {
