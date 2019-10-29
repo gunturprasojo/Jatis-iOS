@@ -32,7 +32,7 @@ A library iOS project with Jatis standard development guides.
   
   s.platform = :ios, '10.2'
   
-  s.source_files =  'JatisView/**/*', 'JatisBanner/**/*' , 'JatisTextField/**/*' , 'JatisTextView/**/*' , 'JatisPopUp/**/*', 'JatisDatePicker/**/*'
+  s.source_files =  'JatisView/**/*.{h,m,swift}', 'JatisBanner/**/*.{h,m,swift}' , 'JatisTextField/**/*.{h,m,swift}' , 'JatisTextView/**/*.{h,m,swift}' , 'JatisPopUp/**/*.{h,m,swift}', 'JatisDatePicker/**/*.{h,m,swift}'
   
   s.swift_version = '4.2'
   
