@@ -212,6 +212,9 @@ extension JatisPopUpTable : UITableViewDataSource, UITableViewDelegate{
         }else {
             tableView.allowsSelection = false
         }
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0.0
+        }
         tableView.backgroundColor = .blue
         tableView.reloadData()
     }
